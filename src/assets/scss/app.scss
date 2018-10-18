@@ -10,8 +10,10 @@
 @import "mixins/colors";
 @import "mixins/variables";
 
+
 //GIA custom settings --
 @import "settings";
+
 
 
 //Component specific styles 
@@ -27,6 +29,11 @@
 
 
 @import "pages/home";
-@import "pages/footer";
+@import "layout/footer";
 @import "pages/backgrounds";
+
+
+//Layout
+@import "layout/footer";
+@import "layout/nav_header";
 

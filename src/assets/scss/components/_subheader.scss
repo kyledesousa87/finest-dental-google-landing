@@ -1,0 +1,30 @@
+.subheader-cta-video {
+  position: relative;
+  @include make-container-max-widths();
+  margin: 0 auto;
+
+  h1 {
+    float: left;
+  }
+  h2{
+    margin-right: 125px;
+    text-align: right;
+    float:right;
+    a {
+      display:block;
+
+      color:#008fd3;
+    }
+  }
+
+  .henry-video {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    img {
+      height: 100px;
+    }
+
+  }
+  @include clearfix;
+}

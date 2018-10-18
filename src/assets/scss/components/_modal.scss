@@ -1,0 +1,48 @@
+button.close {
+  width: 40px;
+  height: 40px;
+  display: block;
+  bottom: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  outline: none;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 8px;
+  z-index: 10;
+
+  span {
+    font-weight: 100 ;
+    color: #ffffff;
+
+    transition: transform .8s ease-in-out;
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+.modal-content {
+  border: 0;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  &:after {
+    border-radius: 0 0.2em 0 0;
+    border-width: 1.75em;
+    border-right-color: $acc1;
+    border-top-color: $acc1;
+  }
+}
+
+
+
+

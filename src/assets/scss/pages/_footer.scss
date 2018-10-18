@@ -1,0 +1,96 @@
+// Layout Style
+
+//$footerBG: pink;
+$footerBG: $acc3;
+$footerH: 280px;
+
+body {
+  padding: 0 0 $footerH 0 !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+
+  @include make-container();
+
+  background-color: $footerBG;
+  position: absolute;
+  bottom: 0;
+  height: $footerH;
+  padding-top: 55px;
+  width: 100%;
+
+  .footer-row {
+    margin: 0 auto !important;
+    width: 1200px;
+    justify-content: center;
+    @include make-row();
+
+    .col {
+      @include media-breakpoint-up(sm) {
+
+      }
+      @include media-breakpoint-up(lg) {
+
+      }
+    }
+    color: white;
+
+    a {
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+      font-weight: 300;
+      strong, span {
+        font-weight: 500;
+        text-decoration: none;
+      }
+      font-family: $fontName;
+      color: white;
+      transition: all 0.3s;
+      position: relative;
+
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, span {
+      color: #ffffff;
+    }
+    p {
+      color: #ffffff;
+      padding-top: 10px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        strong {
+          font-weight: 500;
+          color: #ffffff;
+        }
+        a {
+          strong {
+            font-weight: 500;
+            color: #ffffff;
+          }
+          font-family: $fontName;
+          color: white;
+          transition: all 0.3s;
+          position: relative;
+          &:hover {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

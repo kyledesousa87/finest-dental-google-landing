@@ -1,0 +1,32 @@
+// Custom bootstrap variable overrides
+@import "bootstrap_variable_overrides";
+
+//Bootstrap styles 
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+//Custom mixins
+@import "mixins/mixins";
+@import "mixins/colors";
+@import "mixins/variables";
+
+//GIA custom settings --
+@import "settings";
+
+
+//Component specific styles 
+@import "components/font";
+@import "components/implants";
+@import "components/social";
+@import "components/subheader";
+@import "components/modal";
+
+
+//Form specific styles
+@import "forms/buttons";
+
+
+@import "pages/home";
+@import "pages/footer";
+@import "pages/backgrounds";
+

@@ -1,0 +1,22 @@
+.submit {
+  outline:none;
+  @include fluid-type(18px, 40px);
+  width: 100%;
+  background-color: $acc4;
+  color:$acc5 ;
+  span, strong {
+    color:$acc5 ;
+    &:hover {
+      color:$acc4;
+    }
+  }
+  border: 0;
+  &:hover {
+    background-color: white;
+    color:$acc4;
+    span, strong {
+      color:$acc4 ;
+
+    }
+  }
+}

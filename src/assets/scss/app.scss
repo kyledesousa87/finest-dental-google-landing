@@ -1,16 +1,15 @@
 // Custom bootstrap variable overrides
 @import "bootstrap_variable_overrides";
 
-//Bootstrap styles 
+//Bootstrap styles
 @import "node_modules/bootstrap/scss/bootstrap";
-
-//@import "/node_modules/linearicons/dist/web-font/style";
 
 
 //Custom mixins
 @import "mixins/mixins";
 @import "mixins/colors";
 @import "mixins/variables";
+
 
 
 //GIA custom settings --

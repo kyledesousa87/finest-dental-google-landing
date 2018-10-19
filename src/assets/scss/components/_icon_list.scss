@@ -1,10 +1,13 @@
 .icon-row-bg {
   padding: 10px;
+  @include media-breakpoint-down(md) {
+    padding: 0px;
+  }
 
   background-color: lighten($acc1, 45%);
 
   .icon-row-holder {
-    max-width: $grid-breakpoints(xl);
+    max-width: 1400px;
     margin: 0 auto;
   }
 
@@ -24,11 +27,9 @@
         flex-basis: auto;
       }
 
-      @include media-breakpoint-up(lg) {
-        flex-basis: 30%;
-      }
+
       @include media-breakpoint-down(md) {
-        flex-basis: 50%;
+        flex-basis: 33%;
       }
       @include media-breakpoint-down(sm) {
         flex-basis: 50%;
@@ -43,16 +44,23 @@
     }
     .icon-dis {
       @include media-breakpoint-up(lg) {
-        padding: 0px 10px;
+        padding: 0px 5px;
       }
       @include media-breakpoint-down(md) {
-        padding: 0px 10px;
+        padding: 10px 10px;
+        border-bottom: 1px solid $acc1;
+        min-height: 90px;
       }
       @include media-breakpoint-down(sm) {
         padding: 10px 10px;
+        border-bottom: 1px solid $acc1;
+        min-height: 90px;
       }
       @include media-breakpoint-down(xs) {
         padding: 10px 10px;
+        border-bottom: 1px solid $acc1;
+        min-height: 90px;
+
       }
 
       position: relative;
@@ -63,7 +71,7 @@
         height: 50px;
       }
       &-h1, &-h2 {
-        margin-left: 65px;
+        margin-left: 55px;
       }
       &-h1 {
         font-size: 22px;

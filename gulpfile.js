@@ -78,6 +78,12 @@ gulp.task('watch', ['sass'], function () {
 
 
 // ------------ Optimization Tasks -------------
+
+
+
+
+
+
 // Copies image files to dist
 gulp.task('images', function () {
     return gulp.src('src/assets/images/**/*.+(png|jpg|jpeg|gif|svg)')
@@ -92,6 +98,24 @@ gulp.task('media', function () {
         .pipe(gulp.dest('dist/assets/media/'));
         console.log('Copying media into dist folder');
 });
+
+// Places font files in the dist folder
+gulp.task('iconfonts', function () {
+    return gulp.src([
+        'node_modules/linearicons/dist/web-font/fonts/*.eot',
+        'node_modules/linearicons/dist/web-font/fonts/*.svg',
+        'node_modules/linearicons/dist/web-font/fonts/*.ttf',
+        'node_modules/linearicons/dist/web-font/fonts/*.woff',
+        'node_modules/linearicons/dist/web-font/fonts/*.woff2'
+
+    ])
+.pipe(gulp.dest("dist/assets/fonts"))
+.pipe(gulp.dest("src/assets/fonts"))
+        .pipe(browserSync.stream());
+    console.log('Copying  icon fonts into dist folder');
+});
+
+
 
 // Places font files in the dist folder
 gulp.task('font', function () {
@@ -132,10 +156,10 @@ gulp.task('clean:dist', function () {
 
 // ------------ Build Sequence -------------
 // Simply run 'gulp' in terminal to run local server and watch for changes
-gulp.task('default', ['clean:dist', 'font', 'scripts', 'images', 'compile-html', 'resetPages', 'media', 'watch']);
+gulp.task('default', ['clean:dist', 'iconfonts', 'font',  'scripts', 'images', 'compile-html', 'resetPages', 'media', 'watch']);
 
 // Creates production ready assets in dist folder
 gulp.task('build', function () {
     console.log('Building production ready assets');
-    runSequence('clean:dist', 'sass', ['scripts', 'images', 'font', 'compile-html'])
+    runSequence('clean:dist', 'sass', ['scripts', 'images', 'iconfonts', 'font', 'compile-html'])
 });

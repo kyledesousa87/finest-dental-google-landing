@@ -1,5 +1,5 @@
 .icon-row-bg {
-  padding: 10px;
+  padding: 20px 0;
   @include media-breakpoint-down(md) {
     padding: 0px;
   }
@@ -87,4 +87,27 @@
 
   }
 
+}
+
+
+ul.tick-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    padding-left: 35px;
+    position: relative;
+    padding-bottom: 8px;
+    &:before {
+      content: '';
+      background: url('/assets/images/tick_big.png');
+      background-position: center center;
+      background-size: contain;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
 }

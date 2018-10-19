@@ -1,0 +1,24 @@
+.panel {
+  padding: 30px;
+  border-radius: 5px;
+  &.light {
+    background-color: lighten($acc1, 45%);
+  }
+
+
+  h2 {
+    @include fluid-type(18px, 25px);
+  }
+  @include clearfix;
+
+  a {
+    @include fluid-type(16px, 18px);
+    color: $acc1;
+    display: block;
+    padding-top: 10px;
+  }
+}
+
+.gl-ch-panel {
+  min-height: 310px;
+}

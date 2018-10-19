@@ -15,3 +15,46 @@
   background-position: center center;
   background-size: cover;
 }
+
+.img-five-year {
+  background: url('/assets/images/up-to-5-years-0-finance-available.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 100px;
+  width: 200px;
+  display: inline-block;
+}
+
+.img-free-consult {
+  background: url('/assets/images/free-consultation.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 100px;
+  width: 200px;
+  display: inline-block;
+}
+
+.img-five-star {
+  background: url('/assets/images/5star-rated-excellent.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 100px;
+  width: 200px;
+  display: inline-block;
+}
+
+
+.circle-price {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+  img {
+    width: 100%;
+  }
+}

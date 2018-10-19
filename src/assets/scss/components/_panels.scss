@@ -18,7 +18,27 @@
     padding-top: 10px;
   }
 }
+.sections {
 
+  @include media-breakpoint-up(lg) {
+    padding: 3% 0;
+
+  }
+  @include media-breakpoint-down(md) {
+    padding: 3% 0;
+
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 15px 0;
+  }
+}
 .gl-ch-panel {
   min-height: 310px;
 }
+
+
+
+

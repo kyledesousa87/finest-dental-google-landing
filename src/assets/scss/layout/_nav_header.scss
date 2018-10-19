@@ -1,12 +1,5 @@
 $navBarH: 54px;
 
-body {
-  overflow-x: hidden;
-  &.fixed-header {
-    margin-top: $navBarH;
-  }
-}
-
 .navbar {
 
   &.fixed {

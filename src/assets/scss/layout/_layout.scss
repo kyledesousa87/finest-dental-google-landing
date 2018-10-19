@@ -1,0 +1,28 @@
+$navBarH: 54px;
+
+html {
+  box-sizing: border-box;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+body {
+
+  overflow-x: hidden;
+  &.fixed-header {
+    margin-top: $navBarH;
+  }
+}
+
+
+.v-center-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fill {
+  min-height: 100%;
+}

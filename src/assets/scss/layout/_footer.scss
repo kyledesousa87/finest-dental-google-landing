@@ -18,22 +18,45 @@ html {
   @include make-container();
 
   background-color: $footerBG;
-  padding-top: 55px;
-  width: 100%;
+
+
 
   .footer-row {
     margin: 0 auto !important;
-    width: 1200px;
+    max-width: 1200px;
+
     justify-content: center;
+    padding: 20px ;
     @include make-row();
 
     .col {
-      @include media-breakpoint-up(sm) {
+      @include make-col-ready();
+      @include media-breakpoint-down(sm) {
+        @include make-col(12);
+        padding: 15px 0;
+        border-bottom: 1px solid lighten($acc3, 10% );
 
+
+        &:nth-child(1){
+          order: 4;
+          border:0 ;
+        }
+        &:nth-child(2){
+          order: 1;
+        }
+        &:nth-child(3){
+          order: 3;
+        }
+        &:nth-child(4){
+          order: 2;
+        }
       }
       @include media-breakpoint-up(lg) {
-
+        @include make-col(3);
       }
+
+
+
     }
     color: white;
 

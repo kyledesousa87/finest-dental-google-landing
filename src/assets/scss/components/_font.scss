@@ -2,7 +2,7 @@
 
 $fontName: 'Lato','Gill Sans','Gill Sans MT',Helvetica,Arial,sans-serif;
 
-.body, html, * {
+body, html {
   font-family: $fontName;
   color: $acc3;
 }

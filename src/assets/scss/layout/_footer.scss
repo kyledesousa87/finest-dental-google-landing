@@ -5,7 +5,7 @@ $footerBG: $acc3;
 $footerH: 280px;
 
 body {
-  padding: 0 0 $footerH 0 !important;
+  padding: 0 !important;
 }
 
 html {
@@ -18,9 +18,6 @@ html {
   @include make-container();
 
   background-color: $footerBG;
-  position: absolute;
-  bottom: 0;
-  height: $footerH;
   padding-top: 55px;
   width: 100%;
 

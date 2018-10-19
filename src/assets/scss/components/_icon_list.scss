@@ -1,0 +1,82 @@
+.icon-row-bg {
+  padding: 10px;
+
+  background-color: lighten($acc1, 45%);
+
+  .icon-row-holder {
+    max-width: $grid-breakpoints(xl);
+    margin: 0 auto;
+  }
+
+  .icon-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-flow: wrap;
+
+
+    li {
+
+      @include media-breakpoint-up(lg) {
+        flex-basis: auto;
+      }
+
+      @include media-breakpoint-up(lg) {
+        flex-basis: 30%;
+      }
+      @include media-breakpoint-down(md) {
+        flex-basis: 50%;
+      }
+      @include media-breakpoint-down(sm) {
+        flex-basis: 50%;
+      }
+      @include media-breakpoint-down(xs) {
+        flex-basis: 50%;
+      }
+
+
+      display: block;
+
+    }
+    .icon-dis {
+      @include media-breakpoint-up(lg) {
+        padding: 0px 10px;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 0px 10px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 10px 10px;
+      }
+      @include media-breakpoint-down(xs) {
+        padding: 10px 10px;
+      }
+
+      position: relative;
+      &-ico {
+        position: absolute;
+        font-size: 50px;
+        color: $acc1;
+        height: 50px;
+      }
+      &-h1, &-h2 {
+        margin-left: 65px;
+      }
+      &-h1 {
+        font-size: 22px;
+        color: $acc1;
+      }
+      &-h2 {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        color: $acc3;
+      }
+    }
+
+  }
+
+}

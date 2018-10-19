@@ -1,15 +1,83 @@
+$navBarH: 54px;
+
+body {
+  overflow-x: hidden;
+  &.fixed-header {
+    margin-top: $navBarH;
+  }
+}
+
 .navbar {
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+  }
+  width: 100%;
   background-color: $acc1;
   display: block;
   padding: 0;
-  height: 54px;
+  height: $navBarH;
+  text-align: center;
+
 
   .navbar-brand {
+    @include media-breakpoint-up(lg) {
+      width: 210px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 210px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 210px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 180px;
+    }
+
     background: url($imgPathRoot + "logo_white.png");
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 210px;
+
     overflow: hidden;
     text-indent: -9999px;
+    float: left;
+    margin: 5px;
+  }
+
+  .nav-anchor {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+    @include media-breakpoint-up(lg) {
+      display: inline-block;
+    }
+
+    margin-left: -210px;
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          font-family: $fontName;
+          display: block;
+          @include fluid-type(14px, 18px);
+          color: white;
+          padding: 0px 10px;
+          height: $navBarH;
+          line-height: $navBarH;
+
+        }
+      }
+    }
   }
   .book {
 
@@ -17,6 +85,23 @@
     $bookBgC:$acc4;
     $bookTxtCH:$grey-dark;
     $bookBgCH:$white;
+
+    i {
+      display: block;
+      float: left;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      height: 20px;
+      line-height: 20px;
+      width: 17px;
+      position: absolute;
+      left: 14px;
+      top: 7px;
+      opacity: 0.5;
+      font-size: 27px;
+      color: $bookTxtC;
+      font-weight: 600;
+    }
 
     display: block;
     background-color: $bookBgC;
@@ -33,7 +118,11 @@
 
     &:hover {
       background-color: $bookBgCH;
+      i {
+        color: $bookTxtCH;
+      }
       div > * {
+
         color: $bookTxtCH;
       }
     }

@@ -4,6 +4,8 @@
 //Bootstrap styles 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+//@import "/node_modules/linearicons/dist/web-font/style";
+
 
 //Custom mixins
 @import "mixins/mixins";
@@ -15,13 +17,16 @@
 @import "settings";
 
 
+@import "components/lineicons";
 
 //Component specific styles 
 @import "components/font";
 @import "components/implants";
 @import "components/social";
-@import "components/subheader";
+@import "components/icon_list";
+
 @import "components/modal";
+@import "components/subheader";
 
 
 //Form specific styles
@@ -36,4 +41,5 @@
 //Layout
 @import "layout/footer";
 @import "layout/nav_header";
+
 

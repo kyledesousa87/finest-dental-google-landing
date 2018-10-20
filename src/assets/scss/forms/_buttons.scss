@@ -16,6 +16,7 @@
 
   &.big {
     padding: 20px 25px ;
+    @include fluid-type(17px, 24px);
   }
   &.full {
     width: 100%;
@@ -73,5 +74,57 @@
       color:$acc4 ;
 
     }
+  }
+}
+
+.float-btn {
+  @include media-breakpoint-up(lg) {
+    position: relative;
+  }
+  @include media-breakpoint-down(md) {
+    position: relative;
+
+  }
+  @include media-breakpoint-down(sm) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    z-index: 100;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 27px;
+  }
+  @include media-breakpoint-down(xs) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    z-index: 100;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 27px;
+  }
+}
+
+.hide-md-lg {
+  @include media-breakpoint-up(lg) {
+    display: inline-block;
+  }
+  @include media-breakpoint-down(md) {
+    display: inline-block;
+
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+
+  }
+  @include media-breakpoint-down(xs) {
+    display: none;
+
   }
 }

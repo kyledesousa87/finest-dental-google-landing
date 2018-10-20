@@ -1,10 +1,40 @@
 .panel {
-  padding: 30px;
-  border-radius: 5px;
+
+  border-radius: 8px;
+  p {
+    @include fluid-type(14px, 17px);
+    margin-bottom: 30px;
+    line-height: 25px;
+
+    font-weight: 300;
+  }
+
   &.light {
     background-color: lighten($acc1, 45%);
   }
 
+  &.dark-blue {
+    background-color: $acc6;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+
+  &.dark-green {
+    background-color: darken($acc4, 5%);
+    color: white;
+    a {
+      color: white;
+    }
+  }
+
+  &.pad-40 {
+    padding: 40px;
+  }
+  &.pad-30 {
+    padding: 30px;
+  }
 
   h2 {
     @include fluid-type(18px, 25px);
@@ -17,9 +47,17 @@
     display: block;
     padding-top: 10px;
   }
+
+
+  em {
+    &:nth-child(1){
+      border-bottom: 2px solid lighten($acc6,15%);
+      display: block;
+    }
+  }
 }
 .sections {
-
+  position: relative;
   @include media-breakpoint-up(lg) {
     padding: 3% 0;
 
@@ -41,6 +79,16 @@
 
 
 
+.sectionHeading {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: $acc1;
+  color: white;
+  @include fluid-type(18px, 28px);
+  padding: 10px 0;
+  text-align: center;
+}
 
 .bg-light-blue {
   background-color: $light-blue;

@@ -3,10 +3,19 @@
   $grid-gutter-width: 0px !default;
 
   h2 {
+    .nl-return {
+      @include media-breakpoint-up(md) {
+        display: inline-block;
+      }
+      @include media-breakpoint-down(sm) {
+       display: block;
+      }
+
+    }
     @include media-breakpoint-up(sm) {
       @include make-col(12);
     }
-    @include fluid-type(25px, 40px);
+
   }
 
 

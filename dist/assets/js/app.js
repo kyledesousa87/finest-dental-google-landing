@@ -199,7 +199,25 @@ function openModal(id) {
 }
 
 
+// asdas
+
+// Select all links with hashes
+
+
+// asasd
+
+
+
+
 $(document).ready(function() {
+
+    $('.nav-anchor li a').click(function() {
+        var target = $(this.hash);
+        if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+        if (target.length == 0) target = $('html');
+        $('html, body').animate({ scrollTop: target.offset().top - 54}, 1000);
+        return false;
+    });
 
 
     // close modal if overlay tapped/clicked
@@ -224,7 +242,6 @@ $(document).ready(function() {
         $('#guaranteeModalOuter .modal-content .modal-body ').css('overflow-y', 'auto');
         $('#guaranteeModalOuter .modal-content .modal-body').css('max-height', $(window).height() * 0.7);
     });
-
 
     $('.guaranteePopup').click(function(e){
 

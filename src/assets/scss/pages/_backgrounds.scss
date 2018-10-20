@@ -9,13 +9,37 @@
   background-size: cover;
   background-attachment: fixed;
 }
-.old-people {
+
+.bg-couple {
   background: url('/assets/images/implants7/old_couple.jpg');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
 
 }
+
+.bg-glass-water {
+  background: url('/assets/images/implants7/teeth_in_glass.jpg');
+
+  background-size: cover;
+  background-attachment: fixed;
+  @include media-breakpoint-up(lg) {
+    background-position: center center;
+
+  }
+  @include media-breakpoint-down(md) {
+
+    background-position: center center;
+  }
+  @include media-breakpoint-down(sm) {
+    background-position: left top;
+  }
+  @include media-breakpoint-down(xs) {
+    background-position: left top;
+  }
+
+}
+
 
 .img-five-year {
   background: url('/assets/images/up-to-5-years-0-finance-available.png');
@@ -56,6 +80,48 @@
   height: 120px;
   width: 120px;
   display: inline-block;
+  img {
+    width: 100%;
+  }
+
+}
+
+.big-tick {
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  height: 120px;
+  width: 120px;
+
+
+
+}
+
+
+.circle-doc {
+  z-index: 5;
+  position: absolute;
+  bottom: 120px;
+  right: 40px;
+  height: 120px;
+  width: 120px;
+
+
+  @include media-breakpoint-up(lg) {
+    display: inline-block;
+
+  }
+  @include media-breakpoint-down(md) {
+
+    display: inline-block;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
   img {
     width: 100%;
   }

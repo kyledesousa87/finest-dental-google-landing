@@ -107,3 +107,12 @@ h6, .h6 { @include fluid-type($h6-font-size/1.5, $h6-font-size); }
   font-weight: 300;
   @include fluid-type(30px, 70px);
 }
+.meta-text {
+  @include fluid-type(10px, 14px);
+}
+
+.nb-text {
+  font-size: 15px;
+  line-height: 15px;
+  color: #aa3333;
+}

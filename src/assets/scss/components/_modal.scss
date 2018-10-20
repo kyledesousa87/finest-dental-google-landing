@@ -23,9 +23,80 @@ button.close {
 
 }
 
+
+
+#guaranteeModalOuter {
+
+  .modal-dialog {
+    max-width: 600px;
+    .modal-content {
+      padding: 15px;
+      .modal-body {
+        position: relative;
+        clear: both;
+        width: 100%;
+
+      }
+
+    }
+  }
+
+}
+
+#videoModalOuter {
+  .modal-dialog {
+    max-width: 1280px;
+    .modal-content {
+      padding: 15px;
+      .modal-body {
+        position: relative;
+        padding-bottom: 55.1%;
+        height: 0;
+        clear: both;
+        width: 100%;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+
+}
+
+#formModalOuter {
+  .modal-dialog {
+    max-width: 600px;
+    .modal-content {
+      padding: 15px;
+      .modal-body {
+        position: relative;
+
+
+        clear: both;
+        width: 100%;
+
+      }
+
+    }
+  }
+
+}
+
+
+
 .modal-content {
   border: 0;
   position: relative;
+
+
+
+
   &:before, &:after {
     content: '';
     position: absolute;

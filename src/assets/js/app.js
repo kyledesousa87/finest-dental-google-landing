@@ -202,9 +202,26 @@ $(document).ready(function() {
 
     });
 
+    $('.openForm').click(function(e){
+        e.preventDefault();
+        openModal('form');
+    });
+
+    $('#guaranteeModalOuter').on('.modal', function () {
+        $('#guaranteeModalOuter .modal-content .modal-body ').css('overflow-y', 'auto');
+        $('#guaranteeModalOuter .modal-content .modal-body').css('max-height', $(window).height() * 0.7);
+    });
+
+
+    $('.guaranteePopup').click(function(e){
+
+        e.preventDefault();
+        openModal('guarantee');
+        $('#guaranteeModalOuter .modal-content .modal-body ').css('overflow-y', 'auto');
+        $('#guaranteeModalOuter .modal-content .modal-body').css('max-height', $(window).height() * 0.7);
+    });
 
     $('.close').click(function(e){
-        console.log("closed modal");
         e.preventDefault();
         closeModal('video');
         closeModal('image');

@@ -1,4 +1,5 @@
 // Custom bootstrap variable overrides
+@import "mixins/colors";
 @import "bootstrap_variable_overrides";
 
 //Bootstrap styles
@@ -7,7 +8,7 @@
 
 //Custom mixins
 @import "mixins/mixins";
-@import "mixins/colors";
+
 @import "mixins/variables";
 
 

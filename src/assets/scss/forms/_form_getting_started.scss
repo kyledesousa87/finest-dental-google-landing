@@ -90,7 +90,7 @@
 
 
 #formInfoCol {
-  background-image:url(../images/icon_clock.png);
+  background: url($imgPathRoot + "icon_clock.png");
   background-position:0 0;
   background-repeat:no-repeat;
   padding-top:130px;

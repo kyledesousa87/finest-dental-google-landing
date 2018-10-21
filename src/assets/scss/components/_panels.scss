@@ -83,7 +83,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: $acc1;
+  background-color: darken($acc1, 10%);
   color: white;
   @include fluid-type(18px, 28px);
   padding: 10px 0;

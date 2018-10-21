@@ -136,7 +136,7 @@ gulp.task('scripts', function () {
     return gulp.src([
             'src/assets/js/vendors/jquery.min.js', 
             'src/assets/js/vendors/popper.min.js', 
-            'src/assets/js/vendors/bootstrap.min.js', 
+            'src/assets/js/vendors/bootstrap.min.js',
             'src/assets/js/app.js'
         ])
         .pipe(sourcemaps.init())

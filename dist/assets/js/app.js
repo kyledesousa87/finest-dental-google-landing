@@ -219,6 +219,14 @@ $(document).ready(function() {
         return false;
     });
 
+    // var spy = new ScrollSpy('#posh', {
+    //     nav: '.nav-anchor ul li a',
+    //     className: 'active',
+    //     callback: function () {
+    //     }
+    // })
+
+
 
     // close modal if overlay tapped/clicked
     $('#cover,.modal').click(function(e) {

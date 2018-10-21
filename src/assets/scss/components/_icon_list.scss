@@ -97,7 +97,7 @@ ul.tick-list {
     padding-bottom: 8px;
     &:before {
       content: '';
-      background: url('/assets/images/tick_big.png');
+      background: url($imgPathRoot + "tick_big.png");
       background-position: center center;
       background-size: contain;
       height: 20px;
@@ -106,5 +106,52 @@ ul.tick-list {
       left: 0;
       top: 0;
     }
+  }
+}
+
+.pill-icon {
+  position: relative;
+  padding: 10px;
+  background-color: $gray-100;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  i {
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    &.bigIcon {
+      @include fluid-type(35px, 38px);
+
+      color: $gray-300;
+    }
+  }
+  h3 {
+    @include fluid-type(18px, 24px);
+    margin-left: 80px;
+    line-height: 50px;
+    min-height: 50px;
+    margin-bottom: 0;
+  }
+}
+
+h4.whychoose {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  span {
+    display: inline-block;
+    font-family: 'Lato',Helvetica,Arial,sans-serif;
+    border-radius: 50%;
+    background-color: #008fd3;
+    color: white;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 50px;
+    margin-right: 10px;
+    position: relative;
+    top: 8px;
   }
 }

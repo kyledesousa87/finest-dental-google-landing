@@ -10,7 +10,12 @@ http://localhost:3000
 4.	To create compressed, production-ready assets run `gulp build`. This will delete everything in the dist folder and recreate all of your complied files. Never make updates directly into the dist folder as these files get overridden each time. Note: The dist folder is not kept in source control. 
 
 
-
+```txt
+git clone https://github.com/kyledesousa87/finest-dental-google-landing.git
+npm install
+gulp
+gulp build
+```
 
 ## Additional Resources:
 - [Sass: Syntactically Awesome Style Sheets](http://sass-lang.com/)

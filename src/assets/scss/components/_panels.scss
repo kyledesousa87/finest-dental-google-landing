@@ -80,6 +80,17 @@
 
 
 .sectionHeading {
+
+  @include media-breakpoint-down(md) {
+   display: block;
+
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
   position: absolute;
   top: 0;
   width: 100%;

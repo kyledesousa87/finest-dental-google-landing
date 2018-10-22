@@ -24,7 +24,7 @@ var gulp = require('gulp'),
 // ------------ Development Tasks -------------
 // Compile Sass into CSS
 gulp.task('sass', function () {
-    return gulp.src(['src/assets/scss/*.scss'])
+    return gulp.src(['src/scss/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({ 
             outputStyle: 'expanded',
@@ -35,7 +35,7 @@ gulp.task('sass', function () {
         .pipe(autoprefixer('last 2 versions'))
         //.pipe(cssnano()) // Use cssnano to minify CSS
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest("dist/assets/css"))
+        .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
         console.log('Compiling scss');
 });
@@ -68,10 +68,10 @@ gulp.task('watch', ['sass'], function () {
         server: "./dist"
     });
 
-    gulp.watch(['src/assets/js/partials/*.js'], ['scripts', browserSync.reload]);
-    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/assets/scss/**/*'], ['sass', browserSync.reload]);
-    gulp.watch(['src/assets/images/**/*'], ['images']);
-    gulp.watch(['src/assets/vid/**/*'], ['media']);
+    gulp.watch(['src/js/partials/*.js'], ['scripts', browserSync.reload]);
+    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/**/*'], ['sass', browserSync.reload]);
+    gulp.watch(['src/images/**/*'], ['images']);
+    gulp.watch(['src/vid/**/*'], ['media']);
     gulp.watch(['src/**/*.html'], ['resetPages', 'compile-html', browserSync.reload]);
     console.log('Watching for changes');
 });
@@ -86,16 +86,16 @@ gulp.task('watch', ['sass'], function () {
 
 // Copies image files to dist
 gulp.task('images', function () {
-    return gulp.src('src/assets/images/**/*.+(png|jpg|jpeg|gif|svg)')
+    return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(cache(imagemin ())) // Caching images that ran through imagemin
-        .pipe(gulp.dest('dist/assets/images/'));
+        .pipe(gulp.dest('dist/images/'));
         console.log('Optimizing images');
 });
 
 // Copies video assets to dist
 gulp.task('media', function () {
-    return gulp.src('src/assets/media/**/*')
-        .pipe(gulp.dest('dist/assets/media/'));
+    return gulp.src('src/media/**/*')
+        .pipe(gulp.dest('dist//media/'));
         console.log('Copying media into dist folder');
 });
 
@@ -109,8 +109,8 @@ gulp.task('iconfonts', function () {
         'node_modules/linearicons/dist/web-font/fonts/*.woff2'
 
     ])
-.pipe(gulp.dest("dist/assets/fonts"))
-.pipe(gulp.dest("src/assets/fonts"))
+.pipe(gulp.dest("dist/fonts"))
+.pipe(gulp.dest("src/fonts"))
         .pipe(browserSync.stream());
     console.log('Copying  icon fonts into dist folder');
 });
@@ -120,12 +120,12 @@ gulp.task('iconfonts', function () {
 // Places font files in the dist folder
 gulp.task('font', function () {
     return gulp.src([
-            'src/assets/fonts/*.eot', 
-            'src/assets/fonts/*.woff', 
-            'src/assets/fonts/*.ttf', 
-            'src/assets/fonts/*.otf'
+            'src/fonts/*.eot', 
+            'src/fonts/*.woff', 
+            'src/fonts/*.ttf', 
+            'src/fonts/*.otf'
         ])
-        .pipe(gulp.dest("dist/assets/fonts"))
+        .pipe(gulp.dest("dist/fonts"))
         .pipe(browserSync.stream());
         console.log('Copying fonts into dist folder');
 });
@@ -134,15 +134,15 @@ gulp.task('font', function () {
 gulp.task('scripts', function () {
     // jQuery first, then Popper.js, then Bootstrap JS, then other JS libraries, and last app.js
     return gulp.src([
-            'src/assets/js/vendors/jquery.min.js', 
-            'src/assets/js/vendors/popper.min.js', 
-            'src/assets/js/vendors/bootstrap.min.js',
-            'src/assets/js/app.js'
+            'src/js/vendors/jquery.min.js', 
+            'src/js/vendors/popper.min.js', 
+            'src/js/vendors/bootstrap.min.js',
+            'src/js/app.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('dist/assets/js/'))
+        .pipe(gulp.dest('dist/js/'))
         .pipe(browserSync.stream());
         console.log('Concatenating JavaScript files into single file');
 });

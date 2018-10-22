@@ -59,6 +59,9 @@ $navBarH: 54px;
       li {
         display: inline-block;
         a {
+          &.active {
+            background-color: darken($acc1, 10%);
+          }
           text-decoration: none;
           font-family: $fontName;
           display: block;

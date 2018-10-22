@@ -199,34 +199,22 @@ function openModal(id) {
 }
 
 
-// asdas
-
-// Select all links with hashes
-
-
-// asasd
-
-
 
 
 $(document).ready(function() {
 
+    //call back to add active class
+
     $('.nav-anchor li a').click(function() {
+        $('.navbar .nav-anchor ul li a').removeClass('active');
+        $(this).addClass('active');
+
         var target = $(this.hash);
         if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
         if (target.length == 0) target = $('html');
-        $('html, body').animate({ scrollTop: target.offset().top - 54}, 1000);
+        $('html, body').animate({ scrollTop: target.offset().top - 52}, 1000);
         return false;
     });
-
-    // var spy = new ScrollSpy('#posh', {
-    //     nav: '.nav-anchor ul li a',
-    //     className: 'active',
-    //     callback: function () {
-    //     }
-    // })
-
-
 
     // close modal if overlay tapped/clicked
     $('#cover,.modal').click(function(e) {
@@ -301,6 +289,7 @@ $(document).ready(function() {
 
 
     });
+
     $("form[action='/patient_submission.php']").submit(function(event){
 
         if(validateCancellationForm($(this))) {
@@ -420,6 +409,11 @@ $(document).ready(function() {
 
     // Add scrollspy to <body>
     $('body').scrollspy({offset: 50});
+
+    $('.navbar .nav-anchor ul li a').on('click', function() {
+
+        // UNNECESSARY: window.location.hash=$('a', this).attr('href');
+    });
 
 });
 

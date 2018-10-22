@@ -12,6 +12,7 @@ http://localhost:3000
 
 ```txt
 git clone https://github.com/kyledesousa87/finest-dental-google-landing.git
+cd finest-dental-google-landing
 npm install
 gulp
 gulp build

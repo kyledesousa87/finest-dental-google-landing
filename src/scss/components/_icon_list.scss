@@ -134,24 +134,23 @@ ul.tick-list {
   }
 }
 
-h4.whychoose {
+.sections-hed-num {
+  @include fluid-type(20px, 30px);
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 30px;
-  font-size: 30px;
+  padding: .8em 0;
   span {
     display: inline-block;
     font-family: 'Lato',Helvetica,Arial,sans-serif;
     border-radius: 50%;
     background-color: #008fd3;
     color: white;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    line-height: 60px;
-    font-size: 50px;
+    font-size: 25px;
     margin-right: 10px;
     position: relative;
-    top: 8px;
   }
 }
+

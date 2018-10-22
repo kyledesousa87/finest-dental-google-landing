@@ -128,3 +128,26 @@
 
   }
 }
+
+a.btn-facebook {
+    background-color: #4267b2;
+    border-radius: 4px;
+    border: 1px solid lighten(#4267b2, 20%);
+    color: #ffffff !important;
+    width: 100%;
+    padding: 0.8rem 1.375rem;
+    position: relative;
+
+    display: block;
+
+    span {
+      color: white;
+      position: absolute;
+      left: 0;
+      border-right: 1px solid lighten(#4267b2, 20%);
+      top: 0;
+      padding: 0.8rem;
+
+    }
+
+}

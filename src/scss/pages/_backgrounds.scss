@@ -52,13 +52,26 @@
 }
 
 .img-free-consult {
-  background: url($imgPathRoot + "free-consultation.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  height: 100px;
-  width: 200px;
-  display: inline-block;
+
+  a {
+
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    background: url($imgPathRoot + "free-consultation.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 100px;
+    width: 200px;
+    display: inline-block;
+    &:hover {
+      transform: scale(1.1) rotate(4deg);
+    }
+  }
 }
 
 .img-five-star {
@@ -89,11 +102,33 @@ background: url($imgPathRoot + "5star-rated-excellent.png");
 .big-tick {
   z-index: 1;
   position: absolute;
-  top: 40px;
-  right: 20px;
-  height: 120px;
-  width: 120px;
 
+  @include media-breakpoint-up(lg) {
+    bottom: 110px;
+    right: 40px;
+    height: 120px;
+    width: 120px;
+
+  }
+  @include media-breakpoint-down(md) {
+    bottom: 110px;
+    right: 40px;
+    height: 100px;
+    width: 100px;
+
+  }
+  @include media-breakpoint-down(sm) {
+    bottom: 20px;
+    right: 40px;
+    height: 120px;
+    width: 120px;
+  }
+  @include media-breakpoint-down(xs) {
+    bottom: 20px;
+    right: 40px;
+    height: 90px;
+    width: 90px;
+  }
 
 
 }

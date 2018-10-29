@@ -186,7 +186,20 @@ function openModal(id) {
 }
 
 
+// autoscroll anchors
+function anim(p) {
+    if(p=='top')
+        target = 0;
+    else
+        target = p.top - 85;
 
+    if($('.fixedheader').length&&$(window).width()<=bpWidth)
+        target -= $('#header').height();
+
+    $('html,body').animate({
+        scrollTop:target+'px'
+    },500);
+}
 
 $(document).ready(function() {
 
@@ -400,6 +413,51 @@ $(document).ready(function() {
     $('.navbar .nav-anchor ul li a').on('click', function() {
 
         // UNNECESSARY: window.location.hash=$('a', this).attr('href');
+    });
+
+
+    $('.fpanel a').click(function(e){
+
+        e.stopPropagation();
+        if($(this).attr('href').indexOf('#')==0) {
+            var i = $(this).parent().index('.fpanel');
+            e.preventDefault();
+            $('.expandedPanel:eq('+i+')').slideDown(500,function(i){
+                $(this).addClass('active');
+                var wh = $(window).height();
+                if($(this).height()>wh){
+                    // show bottom corner close button
+                    $(this).find('a.corner').fadeIn(500);
+                } else {
+                    $(this).find('a.corner').not('.top').fadeOut(500);
+                }
+                // if ($(window).width()<=bpWidth)
+                anim($('#panelsAnchor').offset());
+            });
+            $('#coverLight').fadeIn(500);
+            $('.blurMe').addClass('blur');
+        }
+    });
+
+    $('.fpanel').click(function(){
+        h = $(this).find('a').attr('href');
+        if(h=='#')
+            $(this).find('a').click();
+        else
+            location.href=h;
+    });
+
+    $('.expandedPanel a.corner,#coverLight').click(function(e){
+        e.preventDefault();
+        $('.fpanel').removeClass('inactive');
+        $('.expandedPanel').removeClass('active');
+        $('.expandedPanel').slideUp(500);
+        $('#coverLight').fadeOut(500);
+        $('.blurMe').removeClass('blur');
+        // if ($(window).width()<=bpWidth)
+        if($(this).hasClass('corner')) {
+            anim($('#panelsAnchor').offset());
+        }
     });
 
 });

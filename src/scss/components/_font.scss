@@ -1,12 +1,11 @@
 // Layout Style
 
-$fontName: 'Lato','Gill Sans','Gill Sans MT',Helvetica,Arial,sans-serif;
+$fontName: 'Lato', 'Gill Sans', 'Gill Sans MT', Helvetica, Arial, sans-serif;
 
 body, html {
   font-family: $fontName;
   color: $acc3;
 }
-
 
 /* latin */
 @font-face {
@@ -89,24 +88,46 @@ body, html {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-
-h1, .h1 { @include fluid-type($h1-font-size/1.5, $h1-font-size); }
-h2, .h2 { @include fluid-type($h2-font-size/1.5, $h2-font-size); }
-h3, .h3 { @include fluid-type($h3-font-size/1.5, $h3-font-size); }
-h4, .h4 { @include fluid-type($h4-font-size/1.5, $h4-font-size); }
-h5, .h5 { @include fluid-type($h5-font-size/1.5, $h5-font-size); }
-h6, .h6 { @include fluid-type($h6-font-size/1.5, $h6-font-size); }
-.meta {
-  font-size:12px;
+h1, .h1 {
+  @include fluid-type($h1-font-size/1.5, $h1-font-size);
+  font-weight: 300;
 }
 
+h2, .h2 {
+  @include fluid-type($h2-font-size/1.5, $h2-font-size);
+  font-weight: 300;
+}
+
+h3, .h3 {
+  @include fluid-type($h3-font-size/1.5, $h3-font-size);
+
+  font-weight: 300;
+}
+
+h4, .h4 {
+  @include fluid-type($h4-font-size/1.5, $h4-font-size);
+  font-weight: 300;
+}
+
+h5, .h5 {
+  @include fluid-type($h5-font-size/1.5, $h5-font-size);
+}
+
+h6, .h6 {
+  @include fluid-type($h6-font-size/1.5, $h6-font-size);
+}
+
+.meta {
+  font-size: 12px;
+}
 
 .hed-w-s {
-  text-shadow: 0 0 20px rgba(0,0,0,1);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
   color: $white;
   font-weight: 300;
   @include fluid-type(30px, 70px);
 }
+
 .meta-text {
   @include fluid-type(10px, 14px);
 }

@@ -4,7 +4,11 @@ html {
   box-sizing: border-box;
 }
 
-html, body, main {
+html, body {
+  height: 100%;
+}
+
+.main-fill {
   height: 100%;
 }
 
@@ -24,8 +28,21 @@ body {
 }
 
 .fill {
-  min-height: 100%;
+
   position: relative;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 100%;
+  }
+  @include media-breakpoint-down(md) {
+    min-height: 100%;
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: auto;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: auto;
+  }
 }
 
 #cover {
@@ -38,4 +55,8 @@ body {
   width:100%;
   height:100%;
   display:none;
+}
+
+.underlay {
+  margin-top: -101px;
 }

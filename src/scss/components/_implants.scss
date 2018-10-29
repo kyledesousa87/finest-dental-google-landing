@@ -1,6 +1,8 @@
 .strip-cta {
 
   $grid-gutter-width: 0px !default;
+  background-color: #EAF2F8;
+  border-radius: 20px;
 
   h2 {
     .nl-return {
@@ -163,28 +165,34 @@
 
     .strip-item-monthly {
 
+
+      &.big {
+
+          @include fluid-type(18px, 20px);
+
+      }
+      &.small{
+        @include fluid-type(18px, 20px);
+      }
+
       @include media-breakpoint-up(lg) {
-        padding-top: 15px;
-        font-size:25px;
-        line-height:30px;
+
+
       }
       @include media-breakpoint-down(md) {
         flex-grow: 1;
-        padding-top: 15px;
-        font-size:20px;
-        line-height:24px;
+
+
       }
       @include media-breakpoint-down(sm) {
         flex-grow: 1;
-        padding-top: 0;
-        font-size:18px;
-        line-height:20px;
+
+
       }
       @include media-breakpoint-down(xs) {
         flex-grow: 1;
-        padding-top: 0;
-        font-size:18px;
-        line-height:20px;
+
+
 
       }
 
@@ -204,9 +212,34 @@
       }
     }
 
-    .strip-item-price {
+    .strip-item-or {
       @include media-breakpoint-up(lg) {
+        display: none;
+      }
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+      @include media-breakpoint-down(xs) {
+        display: block;
+      }
 
+    }
+
+    .strip-item-price {
+
+      &.big {
+
+          @include fluid-type(18px, 20px);
+
+      }
+      &.small{
+        @include fluid-type(18px, 20px);
+      }
+
+      @include media-breakpoint-up(lg) {
       }
       @include media-breakpoint-down(md) {
 
@@ -215,6 +248,7 @@
         flex-grow: 1;
       }
       @include media-breakpoint-down(xs) {
+
         flex-grow: 1;
       }
 
@@ -225,6 +259,18 @@
 
       span {
         font-weight:300;
+        @include media-breakpoint-up(lg) {
+          display: inline-block;
+        }
+        @include media-breakpoint-down(md) {
+          display: inline-block;
+        }
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+        @include media-breakpoint-down(xs) {
+          display: none;
+        }
       }
     }
 

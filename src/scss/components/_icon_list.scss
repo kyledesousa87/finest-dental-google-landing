@@ -112,7 +112,7 @@ ul.tick-list {
 .pill-icon {
   position: relative;
   padding: 10px;
-  background-color: $gray-100;
+  background-color: $gray-200;
   border-radius: 5px;
   margin-bottom: 5px;
   i {
@@ -127,10 +127,14 @@ ul.tick-list {
   }
   h3 {
     @include fluid-type(18px, 24px);
-    margin-left: 80px;
-    line-height: 50px;
+    margin-left: 60px;
+    line-height: 26px;
     min-height: 50px;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
   }
 }
 
@@ -154,3 +158,18 @@ ul.tick-list {
   }
 }
 
+
+ul.whyBullets {
+  list-style: none;
+  font-weight: 300;
+  padding-left: 0;
+  li {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: left;
+      .lnr {
+        margin-left: 0;
+        margin-right: 7px;
+    }
+  }
+}

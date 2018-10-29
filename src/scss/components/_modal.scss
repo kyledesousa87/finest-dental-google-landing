@@ -12,12 +12,16 @@ button.close {
   z-index: 10;
 
   span {
-    font-weight: 100 ;
+    font-weight: bold ;
     color: #ffffff;
-
-    transition: transform .8s ease-in-out;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:         transform .8s ease-in-out;
+    transition: all 0.3s ease-in-out 0s;
     &:hover {
-      transform: rotate(180deg);
+
+      cursor: default;
+      transform: rotate(360deg);
+      transition: all 0.3s ease-in-out 0s;
     }
   }
 

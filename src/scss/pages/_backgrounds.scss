@@ -1,7 +1,42 @@
 // General Style
 
+#downloadInvisBrochure {
+  background: url($imgPathRoot + "invis_brochure.png");
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 140px;
+  height: 150px;
+  padding-left: 160px;
+  font-size: 30px;
+  line-height: 135px;
+  transition: all 0.5s;
+  margin-bottom: 20px;
+  small {
+    font-size: 45%;
+    font-style: italic;
+    display: inline-block;
+    background-color: #bbbbbb;
+    color: white;
+    padding: 5px;
+    line-height: 100%;
+    border-radius: 3px;
+    position: relative;
+    top: -4px;
+    margin-left: 10px;
+  }
+}
 
+.portrait {
+  background: url($imgPathRoot + "shallowsplash/newbg2.jpg");
+}
 
+.img-4-girls {
+  background: url($imgPathRoot + "shallowsplash/splash_girls_extended.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 .splash-autumn {
  background: url($imgPathRoot + "shallowsplash/splash_autumn_flip.jpg");
@@ -42,12 +77,12 @@
 
 
 .img-five-year {
-  background: url($imgPathRoot + "up-to-5-years-0-finance-available.png");
+  background: url($imgPathRoot + "zero-finance-available.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  height: 100px;
-  width: 200px;
+  height: 120px;
+  width: 300px;
   display: inline-block;
 }
 
@@ -75,11 +110,11 @@
 }
 
 .img-five-star {
-background: url($imgPathRoot + "5star-rated-excellent.png");
+background: url($imgPathRoot + "rated-excellent.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  height: 100px;
+  height: 130px;
   width: 200px;
   display: inline-block;
 }

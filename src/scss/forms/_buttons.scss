@@ -16,7 +16,7 @@
 
   &.big {
     padding: 20px 25px ;
-    @include fluid-type(17px, 24px);
+    @include fluid-type(17px, 20px);
   }
   &.full {
     width: 100%;
@@ -93,21 +93,20 @@
     left: 0;
     border-radius: 0;
     z-index: 100;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding: 15px;
     font-size: 27px;
   }
   @include media-breakpoint-down(xs) {
+    padding: 15px;
     display: block;
     position: fixed;
     bottom: 0;
     width: 100%;
     left: 0;
-    border-radius: 0;
     z-index: 100;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    font-size: 27px;
+  .submit {
+    box-shadow: 0 0 33px #000;
+  }
   }
 }
 

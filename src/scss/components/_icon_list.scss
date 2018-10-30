@@ -164,7 +164,8 @@ ul.whyBullets {
   font-weight: 300;
   padding-left: 0;
   li {
-    font-size: 24px;
+
+    @include fluid-type(18px, 24px);
     margin-bottom: 15px;
     text-align: left;
       .lnr {

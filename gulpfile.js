@@ -123,12 +123,33 @@ gulp.task('font', function () {
             'src/fonts/*.eot', 
             'src/fonts/*.woff', 
             'src/fonts/*.ttf', 
-            'src/fonts/*.otf'
+            'src/fonts/*.otf',
+            'src/fonts/*',
+
         ])
         .pipe(gulp.dest("dist/fonts"))
         .pipe(browserSync.stream());
         console.log('Copying fonts into dist folder');
 });
+
+
+// Places font files in the dist folder
+gulp.task('fontAwesome', function () {
+    return gulp.src([
+
+        'src/fonts/font-awesome/*',
+        'src/fonts/font-awesome/*.eot',
+        'src/fonts/font-awesome/*.woff',
+        'src/fonts/font-awesome/*.ttf',
+        'src/fonts/font-awesome/*.otf',
+
+    ])
+        .pipe(gulp.dest("dist/fonts/font-awesome"))
+        .pipe(browserSync.stream());
+    console.log('Copying fonts into dist folder');
+});
+
+
 
 // Concatenating js files
 gulp.task('scripts', function () {
@@ -156,10 +177,10 @@ gulp.task('clean:dist', function () {
 
 // ------------ Build Sequence -------------
 // Simply run 'gulp' in terminal to run local server and watch for changes
-gulp.task('default', ['clean:dist', 'iconfonts', 'font',  'scripts', 'images', 'compile-html', 'resetPages', 'media', 'watch']);
+gulp.task('default', ['clean:dist', 'iconfonts', 'font', 'fontAwesome',  'scripts', 'images', 'compile-html', 'resetPages', 'media', 'watch']);
 
 // Creates production ready assets in dist folder
 gulp.task('build', function () {
     console.log('Building production ready assets');
-    runSequence('clean:dist', 'sass', ['scripts', 'images', 'iconfonts', 'font', 'compile-html'])
+    runSequence('clean:dist', 'sass', ['scripts', 'images', 'iconfonts', 'font', 'fontAwesome', 'compile-html'])
 });

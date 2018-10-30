@@ -9,20 +9,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UK's Finest Dental Implants</title>
     <link rel="stylesheet" href="{{root}}/css/app.css">
+    <script async src="//176199.tctm.co/t.js"></script>
 </head>
 
-<body id="posh" class="fixed-header">
+<body id="posh" >
 <div id="cover" style="display: none;">
 </div>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
 
+    {{>book-container}}
+    {{>circ-form}}
+    {{>sidepanel-booking}}
     {{>navigation-invs}}
     <main role="main" class="invisalign underlay container-fluid mr-0 p-0 ">
         {{> body}}
 
 
     </main>
-    {{>footer}}
+    {{>inv-footer}}
 
     {{>modal-video}}
     {{>modal-form}}

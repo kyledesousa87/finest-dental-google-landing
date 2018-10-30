@@ -129,12 +129,10 @@ h6, .h6 {
 }
 
 .meta-text {
-  @include fluid-type(10px, 14px);
+  @include fluid-type(10px, 12px);
 }
 
 .nb-text {
-  font-size: 15px;
-  line-height: 15px;
   color: #aa3333;
 }
 

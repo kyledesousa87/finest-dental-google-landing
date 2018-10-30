@@ -5,10 +5,8 @@
 //Bootstrap styles
 @import "node_modules/bootstrap/scss/bootstrap";
 
-
 //Custom mixins
 @import "mixins/mixins";
-
 @import "mixins/variables";
 
 
@@ -27,6 +25,8 @@
 @import "components/panels";
 @import "components/fpanel";
 @import "components/accordion_custom";
+@import "components/bookContainer";
+@import "components/reviews";
 
 @import "components/modal";
 @import "components/subheader";
@@ -47,6 +47,7 @@
 @import "layout/nav_header";
 
 @import "layout/hero-banners";
+@import "layout/side-panel-booking";
 
 @import "forms/form_getting_started";
 

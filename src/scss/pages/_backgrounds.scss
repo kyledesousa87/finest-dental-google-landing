@@ -8,10 +8,28 @@
   background-size: 140px;
   height: 150px;
   padding-left: 160px;
-  font-size: 30px;
-  line-height: 135px;
+
+
   transition: all 0.5s;
   margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    line-height: 150px;
+    font-size: 35px;
+  }
+  @include media-breakpoint-down(md) {
+    line-height: 40px;
+    font-size: 35px;
+  }
+  @include media-breakpoint-down(sm) {
+    line-height: 35px;
+    font-size: 25px;
+  }
+  @include media-breakpoint-down(xs) {
+    line-height: 30px;
+    font-size: 25px;
+  }
+
   small {
     font-size: 45%;
     font-style: italic;
@@ -28,8 +46,16 @@
 }
 
 .portrait {
-  background: url($imgPathRoot + "shallowsplash/newbg2.jpg");
+  background: url($imgPathRoot + "newbg2.jpg");
 }
+
+.location {
+  background: url($imgPathRoot + "shallowsplash/splash_hooray.jpg");
+   blockquote {
+    background-color: rgba(255,255,255,0.9);
+  }
+}
+
 
 .img-4-girls {
   background: url($imgPathRoot + "shallowsplash/splash_girls_extended.jpg");
@@ -76,48 +102,9 @@
 }
 
 
-.img-five-year {
-  background: url($imgPathRoot + "zero-finance-available.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  height: 120px;
-  width: 300px;
-  display: inline-block;
-}
 
-.img-free-consult {
 
-  a {
 
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
-    transition-duration: 0.3s;
-    transition-property: transform;
-
-    background: url($imgPathRoot + "free-consultation.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    height: 100px;
-    width: 200px;
-    display: inline-block;
-    &:hover {
-      transform: scale(1.1) rotate(4deg);
-    }
-  }
-}
-
-.img-five-star {
-background: url($imgPathRoot + "rated-excellent.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  height: 130px;
-  width: 200px;
-  display: inline-block;
-}
 
 
 .circle-price {
@@ -193,6 +180,180 @@ background: url($imgPathRoot + "rated-excellent.jpg");
     display: none;
   }
   img {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.icon-container-cs {
+
+  @include media-breakpoint-up(xs) {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @include media-breakpoint-up(sm) {
+    width: 100%;
+    padding-top: 10px;
+  }
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    padding-top: 20px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 20px;
+    width: 85%;
+    margin: 0 auto;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 20px;
+    width: 75%;
+    margin: 0 auto;
+  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+a.img-free-consult {
+
+    @include media-breakpoint-up(xs) {
+      height: 50px;
+      width: 45%;
+      margin: 0 auto;
+      display: block;
+
+    }
+    @include media-breakpoint-up(sm) {
+      height: 60px;
+      width: 50%;
+      margin: 0 auto;
+      display: block;
+    }
+    @include media-breakpoint-up(md) {
+      height: 70px;
+      width: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 80px;
+      width: 200px;
+      display: block;
+    }
+    text-indent: -2999px;
+    background-image: url($imgPathRoot + "img-free-consult@2x.png");
+    background-image:
+            linear-gradient(transparent, transparent),
+            url($imgPathRoot + "img-free-consult.svg");
+
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+
+    &:hover {
+      transform: scale(1.1) rotate(4deg);
+    }
+
+}
+
+.img-5-years {
+  display: block;
+  background-image: url($imgPathRoot + "img-5-years@2x.png");
+  background-image:
+          linear-gradient(transparent, transparent),
+          url($imgPathRoot + "img-5-years.svg");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  @include media-breakpoint-up(xs) {
+    height: 50px;
+    width: 45%;
+    margin: 0 auto;
+
+  }
+  @include media-breakpoint-up(sm) {
+    height: 60px;
+    width: 200px;
+    margin: 0 auto;
+  }
+  @include media-breakpoint-up(md) {
+    height: 70px;
+    width: 200px;
+    margin: 0 auto;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 80px;
+    width: 200px;
+  }
+}
+
+.img-five-star {
+  @include media-breakpoint-up(xs) {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+
+  }
+  @include media-breakpoint-up(sm) {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+  }
+  @include media-breakpoint-up(md) {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 80px;
+    width: 80px;
+
+
+  }
+  background-image: url($imgPathRoot + "img-rated-excellent@2x.png");
+  background-image:
+          linear-gradient(transparent, transparent),
+          url($imgPathRoot + "img-rated-excellent.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+
+}
+
+.img-res-mobile {
+  @include media-breakpoint-up(xs) {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+  @include media-breakpoint-up(sm) {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+  }
+  @include media-breakpoint-up(xl) {
     width: 100%;
   }
 }

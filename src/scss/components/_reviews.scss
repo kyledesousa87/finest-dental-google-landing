@@ -1,0 +1,20 @@
+.clients-reviews {
+  display: flex;
+  background-color: $gray-200;
+  padding: 45px 45px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
+  @extend .container;
+  .review-item {
+    padding: 20px;
+    background-color: white;
+    width: 30%;
+    border-radius: 4px;
+    &_name{
+      color: $acc1;
+
+    }
+    &_disc{}
+  }
+}

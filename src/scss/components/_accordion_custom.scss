@@ -27,11 +27,50 @@
     padding-bottom: 3px;
     font-size: 16px;
     color: inherit;
+    position: relative;
     a {
       display: block;
       padding: 10px 15px;
       padding-right: 50px;
       color: $gray-900;
+      &[aria-expanded="true"] {
+        position: relative;
+        &:before {
+          content: '';
+          background: url($imgPathRoot + "arrow-acc.png");
+          background: url($imgPathRoot + "arrow-acc.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          display: block;
+          font-size: 15px;
+          color: #0b2e13;
+          transform: rotate(180deg);
+          right: 15px;
+          top: 7px;
+
+        }
+      }
+      &[aria-expanded="false"] {
+        &:before {
+          content: '';
+          background: url($imgPathRoot + "arrow-acc.png");
+          background: url($imgPathRoot + "arrow-acc.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          display: block;
+          font-size: 15px;
+          color: #0b2e13;
+          transform: rotate(0deg);
+          top: 17px;
+          right: 15px;
+        }
+      }
     }
   }
   .panel-body {

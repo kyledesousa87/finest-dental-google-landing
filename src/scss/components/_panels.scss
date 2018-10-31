@@ -78,6 +78,7 @@
   min-height: 350px;
 }
 
+
 .gradientBg {
   background-color: #FFF;
   background: #f5f5f5;
@@ -132,6 +133,7 @@
       height: 100%;
     }
   }
+
   h1 {
     @include fluid-type(27px, 38px);
     margin-bottom: 45px;
@@ -184,18 +186,7 @@
   }
 
 
-  .text-col-left {
 
-    h3 {
-
-      @include fluid-type(22px, 25px);
-      line-height: 33px;
-      margin-bottom: 28px;
-      font-weight: 300;
-      color: #666666;
-      padding-bottom: 20px;
-    }
-  }
 
 }
 
@@ -492,3 +483,15 @@
   box-sizing: border-box;
 }
 
+.text-col-left {
+
+  h3 {
+    @include fluid-type(22px, 25px);
+    line-height: 33px;
+    margin-bottom: 28px;
+    font-weight: 300;
+    color: #666666;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 20px;
+  }
+}

@@ -63,6 +63,13 @@
   background-attachment: fixed;
 }
 
+.img-skater-girl {
+  background: url($imgPathRoot + "shallowsplash/splash_skater_reversed.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .splash-autumn {
  background: url($imgPathRoot + "shallowsplash/splash_autumn_flip.jpg");
   background-position: center center;

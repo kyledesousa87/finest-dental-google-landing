@@ -56,7 +56,6 @@
   }
 }
 
-
 .img-4-girls {
   background: url($imgPathRoot + "shallowsplash/splash_girls_extended.jpg");
   background-position: center center;
@@ -100,12 +99,6 @@
   }
 
 }
-
-
-
-
-
-
 
 .circle-price {
   z-index: 5;
@@ -154,38 +147,6 @@
 
 
 }
-
-
-.circle-doc {
-  z-index: 5;
-  position: absolute;
-  bottom: 120px;
-  right: 40px;
-  height: 120px;
-  width: 120px;
-
-
-  @include media-breakpoint-up(lg) {
-    display: inline-block;
-
-  }
-  @include media-breakpoint-down(md) {
-
-    display: inline-block;
-  }
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
-  @include media-breakpoint-down(xs) {
-    display: none;
-  }
-  img {
-    width: 100%;
-  }
-}
-
-
-
 
 
 
@@ -386,4 +347,66 @@ a.img-free-consult {
     height: 120px;
     width: 120px;
   }
+}
+
+.circle-doc {
+  z-index: 5;
+  position: absolute;
+  bottom: 120px;
+  right: 40px;
+  height: 120px;
+  width: 120px;
+
+
+  @include media-breakpoint-up(lg) {
+    display: inline-block;
+
+  }
+  @include media-breakpoint-down(md) {
+
+    display: inline-block;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+
+.img-v1-zero {
+  background-image: url($imgPathRoot + "zero-finance-available.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+.img-v1-free-consult {
+  background-image: url($imgPathRoot + "free-consultation.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: block;
+  height: 100px;
+  width: 100%;
+  transition:all 0.25s;
+  &:hover {
+    transform: scale(1.1,1.1);
+  }
+
+}
+.img-v1-rated-excellent {
+  background-image: url($imgPathRoot + "rated-excellent.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: block;
+  height: 100px;
+  width: 100%;
 }

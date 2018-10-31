@@ -99,14 +99,7 @@ $navBarH: 54px;
       list-style: none;
       li {
         display: inline-block;
-        text-decoration: none;
-        font-family: $fontName;
-        display: block;
-        @include fluid-type(13px, 15px);
-        color: white;
-        padding: 0px 10px;
-        height: $navBarH;
-        line-height: $navBarH;
+      
         a {
           &.active {
             background-color: darken($acc1, 10%);

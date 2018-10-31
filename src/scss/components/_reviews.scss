@@ -9,7 +9,7 @@
   .review-item {
     padding: 20px;
     &_name{
-      @include fluid-type(14px, 17px);
+      @include fluid-type(18px, 22px);
       color: $acc1;
       .star {
         display: inline-block;

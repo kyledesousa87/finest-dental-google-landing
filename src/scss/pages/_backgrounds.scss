@@ -417,3 +417,10 @@ a.img-free-consult {
   height: 100px;
   width: 100%;
 }
+
+.img-bermondsey-collage {
+  background: url($imgPathRoot + "implants7/bermondsey_collage.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}

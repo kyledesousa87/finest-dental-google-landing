@@ -203,6 +203,9 @@
 .section {
   padding-top: 50px;
   padding-bottom: 50px;
+  &.bg-grey {
+    background-color: $gray-300;
+  }
 }
 
 .text-col-left, .pokethrough {

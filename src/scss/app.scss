@@ -5,6 +5,8 @@
 //Bootstrap styles
 @import "node_modules/bootstrap/scss/bootstrap";
 
+
+
 //Custom mixins
 @import "mixins/mixins";
 @import "mixins/variables";
@@ -31,6 +33,8 @@
 @import "components/modal";
 @import "components/subheader";
 
+@import "node_modules/owl.carousel/src/scss/owl.carousel";
+@import "node_modules/owl.carousel/src/scss/owl.theme.default";
 
 //Form specific styles
 @import "forms/buttons";

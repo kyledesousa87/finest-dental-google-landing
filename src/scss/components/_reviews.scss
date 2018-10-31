@@ -1,18 +1,30 @@
 .clients-reviews {
-  display: flex;
-  background-color: $gray-200;
-  padding: 45px 45px;
+
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
   @extend .container;
   .review-item {
     padding: 20px;
-    background-color: white;
-    width: 30%;
-    border-radius: 4px;
     &_name{
+      @include fluid-type(14px, 17px);
       color: $acc1;
+      .star {
+        display: inline-block;
+        i {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+          background-image: url($imgPathRoot + "star-rating@2x.png");
+          background-image:
+                  linear-gradient(transparent, transparent),
+                  url($imgPathRoot + "star-rating.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+      }
 
     }
     &_disc{}

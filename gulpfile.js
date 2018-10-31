@@ -116,6 +116,16 @@ gulp.task('iconfonts', function () {
 });
 
 
+// Places font files in the dist folder
+gulp.task('owl', function () {
+    return gulp.src([
+        'node_modules/owl.carousel/dist/*.js',
+    ])
+        .pipe(gulp.dest("src/js/vendors/"))
+        .pipe(browserSync.stream());
+    console.log('Copying  owl');
+});
+
 
 // Places font files in the dist folder
 gulp.task('font', function () {
@@ -158,6 +168,7 @@ gulp.task('scripts', function () {
             'src/js/vendors/jquery.min.js', 
             'src/js/vendors/popper.min.js', 
             'src/js/vendors/bootstrap.min.js',
+            'src/js/vendors/owl.carousel.js',
             'src/js/app.js'
         ])
         .pipe(sourcemaps.init())
@@ -177,7 +188,7 @@ gulp.task('clean:dist', function () {
 
 // ------------ Build Sequence -------------
 // Simply run 'gulp' in terminal to run local server and watch for changes
-gulp.task('default', ['clean:dist', 'iconfonts', 'font', 'fontAwesome',  'scripts', 'images', 'compile-html', 'resetPages', 'media', 'watch']);
+gulp.task('default', ['clean:dist', 'iconfonts', 'font', 'owl', 'fontAwesome',  'scripts', 'images', 'compile-html', 'resetPages', 'media', 'watch']);
 
 // Creates production ready assets in dist folder
 gulp.task('build', function () {

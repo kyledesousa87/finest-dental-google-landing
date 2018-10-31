@@ -109,34 +109,7 @@ ul.tick-list {
   }
 }
 
-.pill-icon {
-  position: relative;
-  padding: 10px;
-  background-color: $gray-200;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  i {
-    position: absolute;
-    left: 15px;
-    top: 18px;
-    &.bigIcon {
-      @include fluid-type(35px, 38px);
 
-      color: $gray-600;
-    }
-  }
-  h3 {
-    @include fluid-type(18px, 24px);
-    margin-left: 60px;
-    line-height: 26px;
-    min-height: 50px;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    flex-flow: column;
-    justify-content: center;
-  }
-}
 
 .sections-hed-num {
   @include fluid-type(20px, 30px);
@@ -172,5 +145,71 @@ ul.whyBullets {
         margin-left: 0;
         margin-right: 7px;
     }
+  }
+}
+
+.pill-icon {
+  position: relative;
+  padding: 10px;
+  background-color: $gray-200;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  i {
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    &.bigIcon {
+      @include fluid-type(35px, 38px);
+
+      color: $gray-600;
+    }
+  }
+  h3 {
+    @include fluid-type(18px, 24px);
+    margin-left: 60px;
+    line-height: 26px;
+    min-height: 50px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
+  }
+}
+
+.tick-list-icon {
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 5px;
+
+
+  i {
+    position: absolute;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 4px;
+    background-image: url($imgPathRoot + "icon-tick@2x.png");
+    background-image:
+            linear-gradient(transparent, transparent),
+            url($imgPathRoot + "icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+
+
+
+  h3 {
+    @include fluid-type(16px, 20px);
+    margin-left: 60px;
+    line-height: 26px;
+    min-height: 50px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
   }
 }

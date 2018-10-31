@@ -320,8 +320,6 @@ a.img-free-consult {
   @include media-breakpoint-up(lg) {
     height: 80px;
     width: 80px;
-
-
   }
   background-image: url($imgPathRoot + "img-rated-excellent@2x.png");
   background-image:
@@ -355,5 +353,37 @@ a.img-free-consult {
   }
   @include media-breakpoint-up(xl) {
     width: 100%;
+  }
+}
+
+.tiad-circ {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 20px;
+  img {
+    width: 100%;
+  }
+  @include media-breakpoint-up(xs) {
+    height: 100px;
+    width: 100px;
+
+
+  }
+  @include media-breakpoint-up(sm) {
+    height: 100px;
+    width: 100px;
+
+  }
+  @include media-breakpoint-up(md) {
+    height: 120px;
+    width: 120px;
+
+  }
+  @include media-breakpoint-up(lg) {
+    height: 120px;
+    width: 120px;
   }
 }

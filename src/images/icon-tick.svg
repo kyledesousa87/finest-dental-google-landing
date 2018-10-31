@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="207px" height="198px" viewBox="0 0 207 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-tick</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Apple-TV" transform="translate(-901.000000, -276.000000)">
+            <g id="icon-tick" transform="translate(893.000000, 276.000000)">
+                <circle id="Oval" fill="#E9E9E9" cx="136.5" cy="109.5" r="78.5"></circle>
+                <g id="Group" fill="#186C5D">
+                    <rect id="Rectangle" transform="translate(55.261768, 147.010489) rotate(49.000000) translate(-55.261768, -147.010489) " x="-4.2382318" y="125.510489" width="119" height="43" rx="21.5"></rect>
+                    <path d="M76.421875,150.216797 L200.440805,3.57891091 C203.293962,0.205385667 208.341686,-0.216455703 211.715211,2.63670183 C214.811714,5.25556781 215.45874,9.7771601 213.220968,13.1593438 L97.0957031,188.671875 L76.421875,150.216797 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

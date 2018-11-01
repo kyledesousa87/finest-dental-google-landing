@@ -147,6 +147,7 @@
       }
       @include media-breakpoint-up(md) {
         height:70px;
+        width: auto;
       }
       @include media-breakpoint-up(lg) {
         height:100px;
@@ -383,27 +384,32 @@
     .strip-item-img {
       text-align: center;
 
-
       @include media-breakpoint-up(xs) {
         height: 60px;
         width: 110px;
+        margin: 0 auto;
       }
       @include media-breakpoint-up(sm) {
         height:50px;
+        margin: 0 auto;
+        width: auto;
       }
       @include media-breakpoint-up(md) {
         height:70px;
+        margin: 0 auto;
+        width: auto;
       }
       @include media-breakpoint-up(lg) {
         height:100px;
         padding-bottom: 10px;
-        width: 100%;
+        width: auto;
+
       }
 
 
       img {
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 100%;
         margin: 0 auto;
       }
 

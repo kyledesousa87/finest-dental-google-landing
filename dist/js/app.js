@@ -3796,22 +3796,6 @@ $(document).ready(function() {
         if(typeof pop !== 'undefined') window.clearTimeout(pop);
     });
 
-    // // remarketing popup?
-    // if($.urlParam('rm')=='y') {
-    //     window.setTimeout(function(){
-    //         openModal('remarket');
-    //     },250);
-    // } else {
-    //     if($('#formModalOuter').length) {
-    //         if($('.site').length)
-    //             var fto = 40000; // longer timeout on site pages
-    //         else
-    //             var fto = 40000;
-    //         pop = window.setTimeout(function(){
-    //             openModal('form');
-    //         },fto);
-    //     }
-    // }
 
     // defer FB pixel
     var dfbp = setTimeout(function(){
@@ -3901,7 +3885,7 @@ $(document).ready(function() {
 
     $('.navbar .nav-anchor ul li a').on('click', function() {
 
-        // UNNECESSARY: window.location.hash=$('a', this).attr('href');
+
     });
 
 
@@ -3948,7 +3932,6 @@ $(document).ready(function() {
             anim($('#panelsAnchor').offset());
         }
     });
-
 
 
 });

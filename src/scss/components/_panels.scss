@@ -1,3 +1,19 @@
+.panel-h {
+  background-color: white;
+  border-radius: 5px;
+  .panel-hed {
+    background-color: $acc4;
+    padding: 10px 40px;
+    color: $white;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+
+  }
+  .panel-body {
+    padding: 40px;
+  }
+}
+
 .panel {
 
   border-radius: 8px;
@@ -630,5 +646,53 @@
 
 
 
+  }
+}
+
+
+.map-headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  @include media-breakpoint-up(xs) {
+    margin-bottom: 25px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 25px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0px;
+  }
+
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    @include fluid-type(32px, 65px);
+    font-weight: 900;
+    @include media-breakpoint-down(md) {
+
+      text-shadow: 0 0 60px #fff;
+
+
+    }
+  }
+  h2 {
+    text-align: center;
+    @include fluid-type(20px, 40px);
+    font-weight: normal;
+  }
+  h3 {
+    text-align: center;
+    @include fluid-type(22px, 42px);
+    font-weight: normal;
   }
 }

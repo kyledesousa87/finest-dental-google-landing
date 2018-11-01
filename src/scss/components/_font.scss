@@ -1,11 +1,30 @@
 // Layout Style
 
 $fontName: 'Lato', 'Gill Sans', 'Gill Sans MT', Helvetica, Arial, sans-serif;
+$altFont: 'PT Serif',Georgia,serif;
 
 body, html {
   font-family: $fontName;
   color: $acc3;
 }
+
+/* latin */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v9/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Serif Bold'), local('PTSerif-Bold'), url(https://fonts.gstatic.com/s/ptserif/v9/EJRSQgYoZZY2vCFuvAnt66qSVyvVp8NA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 /* latin */
 @font-face {
@@ -91,6 +110,9 @@ body, html {
 h1, .h1 {
   @include fluid-type($h1-font-size/1.5, $h1-font-size);
   font-weight: 300;
+  &.bigger {
+    @include fluid-type(40px/1.5, 55px);
+  }
 }
 
 h2, .h2 {
@@ -156,4 +178,8 @@ h2 {
 
 p.bigText {
   @include fluid-type(16x, 19px);
+}
+
+.alt {
+  font-family: $altFont;
 }

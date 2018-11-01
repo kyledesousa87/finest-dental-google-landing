@@ -3670,11 +3670,10 @@ $(document).ready(function() {
 
 
     $('.clients-reviews').owlCarousel({
-        autoplay:true,
-        autoplayHoverPause:true,
+        autoplay: true,
         loop:true,
         margin:10,
-        responsiveClass:true,
+        responsiveClass: true,
         nav: false,
         dots: false,
         responsive:{

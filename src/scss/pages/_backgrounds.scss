@@ -56,6 +56,15 @@
   }
 }
 
+
+.img-map {
+  background: url($imgPathRoot + "img-map.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 .img-4-girls {
   background: url($imgPathRoot + "shallowsplash/splash_girls_extended.jpg");
   background-position: center center;

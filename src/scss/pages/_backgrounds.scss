@@ -394,6 +394,20 @@ a.img-free-consult {
   height: 100px;
   width: 100%;
 }
+
+
+.img-v2-zero {
+  background-image: url($imgPathRoot + "zero-finance-available.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: block;
+  height: 100px;
+  width: 100%;
+  margin: 15px auto;
+}
+
+
 .img-v1-free-consult {
   background-image: url($imgPathRoot + "free-consultation.png");
   background-repeat: no-repeat;
@@ -418,9 +432,135 @@ a.img-free-consult {
   width: 100%;
 }
 
+.img-v2-rated-excellent {
+  background-image: url($imgPathRoot + "rated-excellent-leaf.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+
 .img-bermondsey-collage {
   background: url($imgPathRoot + "implants7/bermondsey_collage.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.hed-price-dental-imp {
+
+
+
+
+  img {
+
+    height: 80px;
+  }
+}
+
+.zero-fin-circ {
+  background: url($imgPathRoot + "zero-finance-circ.png");
+  background-position: center center;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 480px) {
+    top: 40%;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    top: 45%;
+    width: 100px;
+    height: 100px;
+  }
+
+
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 540px) {
+    top: 50%;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    top: 55%;
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    top: 25%;
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    top: 45%;
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    top: 40%;
+    width: 150px;
+    height: 150px;
+  }
+
+}
+
+
+.hed-rated-leaf-cs {
+  background: url($imgPathRoot + "rated-excellent-leaf.jpg");
+
+
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-up(xs) {
+    background-size: 200px 78px;
+    padding-right: 0px;
+    padding-bottom: 80px;
+    min-height: 78px;
+    background-position: center bottom;
+    text-align: center;
+  }
+  @include media-breakpoint-up(sm) {
+    background-size: 200px 78px;
+    padding-right: 200px;
+    min-height: 78px;
+    background-position: right center;
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-size: 200px 78px;
+    padding-right: 200px;
+    padding-bottom: 0;
+    min-height: 78px;
+    background-position: right center;
+    text-align: left;
+  }
+  @include media-breakpoint-up(lg) {
+    background-size: 200px 78px;
+    padding-right: 200px;
+    padding-bottom: 0;
+    min-height: 78px;
+    background-position: right center;
+  }
+
 }

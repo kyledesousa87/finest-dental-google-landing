@@ -185,6 +185,35 @@ function openModal(id) {
 
 }
 
+function reOpen(){
+    $.urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results==null){
+            return null;
+        }
+        else{
+            return results[1] || 0;
+        }
+    };
+
+    // remarketing popup?
+    if($.urlParam('rm')=='y') {
+        window.setTimeout(function(){
+            openModal('form');
+        },250);
+    } else {
+        if($('#formModalOuter').length) {
+            if($('.site').length)
+                var fto = 40000; // longer timeout on site pages
+            else
+                var fto = 40000;
+            pop = window.setTimeout(function(){
+                openModal('form');
+            },fto);
+        }
+    }
+}
+
 
 // autoscroll anchors
 function anim(p) {
@@ -316,6 +345,8 @@ $(document).ready(function() {
 
 
     });
+
+
 
     $("form[action='/patient_submission.php']").submit(function(event){
 
@@ -471,6 +502,8 @@ $(document).ready(function() {
         }
     });
 
+
+    reOpen();
 
 });
 

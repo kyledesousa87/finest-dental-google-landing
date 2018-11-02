@@ -3965,7 +3965,7 @@ $(document).ready(function() {
     });
 
 
-    reOpen();
+    // reOpen();
 
 });
 

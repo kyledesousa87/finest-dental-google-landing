@@ -133,19 +133,25 @@
 .big-tick {
   z-index: 1;
   position: absolute;
-
-  @include media-breakpoint-up(lg) {
-    bottom: 110px;
+  @include media-breakpoint-up(xl) {
+    bottom: 20px;
     right: 40px;
     height: 120px;
     width: 120px;
 
   }
-  @include media-breakpoint-down(md) {
-    bottom: 110px;
+  @include media-breakpoint-up(lg) {
+    bottom: 20px;
     right: 40px;
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 110px;
+
+  }
+  @include media-breakpoint-down(md) {
+    bottom: 40px;
+    right: 40px;
+    height: 90px;
+    width: 90px;
 
   }
   @include media-breakpoint-down(sm) {
@@ -163,6 +169,8 @@
 
 
 }
+
+
 
 
 

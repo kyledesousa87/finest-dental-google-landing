@@ -7,6 +7,9 @@
     color: $white;
     text-align: center;
     border-radius: 5px 5px 0 0 ;
+    &.blue {
+      background-color: $acc1 !important;
+    }
 
   }
   .panel-body {

@@ -84,6 +84,24 @@ button.close {
 }
 
 #formModalOuter {
+
+  @include media-breakpoint-up(lg) {
+    position: fixed !important;
+  }
+  @include media-breakpoint-up(md) {
+    position: absolute !important;
+    overflow: visible !important;
+
+  }
+  @include media-breakpoint-down(sm) {
+    position: absolute !important;
+    overflow: visible !important;
+  }
+  @include media-breakpoint-down(xs) {
+    position: absolute !important;
+    overflow: visible !important;
+  }
+
   .modal-dialog {
     max-width: 600px;
     .modal-content {

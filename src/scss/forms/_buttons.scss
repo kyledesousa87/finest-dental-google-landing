@@ -104,9 +104,47 @@
     width: 100%;
     left: 0;
     z-index: 100;
-  .submit {
-    box-shadow: 0 0 33px #000;
+    .submit {
+      box-shadow: 0 0 33px #000;
+      box-shadow: 0 0 33px #000;
+      border-radius: 50px !important;
+      border: 3px solid lighten($acc4, 30%) !important;
+    }
   }
+}
+
+.mobile-btn {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+
+  }
+  @include media-breakpoint-down(sm) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    z-index: 100;
+    padding: 15px;
+    font-size: 27px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 15px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 100;
+    .submit {
+      box-shadow: 0 0 33px #000;
+      border-radius: 50px !important;
+      border: 3px solid lighten($acc4, 30%) !important;
+    }
   }
 }
 

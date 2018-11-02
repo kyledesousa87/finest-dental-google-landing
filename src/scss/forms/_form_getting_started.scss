@@ -4,9 +4,11 @@
 
       margin: 0 .5rem 1rem;
     }
+
     .form-fields {
       display: flex;
       flex-wrap: wrap;
+      margin:0 0 0 -.5rem;
 
       @include media-breakpoint-down(sm) {
         display: flex;
@@ -15,13 +17,15 @@
 
       .col-fields {
         @include media-breakpoint-down(sm) {
-          display: flex;
+
           width: auto;
-          margin:0 0 .5rem 0;
+          margin:0 0 .5rem .5rem;
+          flex: 1 0 45%;
         }
-        flex-grow: 1;
-        width: 33%;
+
+
         margin:0 0 .5rem .5rem;
+        flex: 1 0 45%;
       }
     }
   }
@@ -34,13 +38,13 @@
     .form-fields {
       display: flex;
       flex-flow: column;
-
+      margin:0 0 0 -.5rem;
 
 
       .col-fields {
         display: flex;
         width: auto;
-        margin:0 0 .5rem 0;
+        margin:0 0 .5rem .5rem;
 
       }
     }

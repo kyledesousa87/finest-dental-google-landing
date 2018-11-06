@@ -23,11 +23,10 @@ html {
 
   .footer-row {
     margin: 0 auto !important;
-    max-width: 1200px;
 
     justify-content: center;
     padding: 20px ;
-    @include make-row();
+    @extend .container;
 
     .col {
       @include make-col-ready();

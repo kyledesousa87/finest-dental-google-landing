@@ -1,0 +1,70 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{!— Required meta tags --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Finest Dental" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <title>UK's Finest Dental Implants</title>
+    <link rel="stylesheet" href="{{root}}/css/app.css">
+    <link rel="shortcut icon" href="https://finestdental.co.uk/favicon.ico" />
+    <script async src="//176199.tctm.co/t.js"></script>
+</head>
+
+<body id="posh" class="fixed-header site">
+<div id="cover" style="display: none;">
+</div>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+
+    {{>di-sidepanel}}
+    {{>di-nav}}
+    <main role="main" class="invisalign underlay container-fluid p-0">
+        {{> body}}
+    </main>
+    {{>di-footer}}
+    {{>modal-video}}
+    {{>modal-form}}
+    {{>modal-guarantee}}
+    <script src="{{root}}/js/app.js"></script>
+<script type="application/javascript">
+
+
+    function smallScreen(){
+        return $(window).width() <= 1179;
+    }
+
+    function initSidebarHide (){
+        var offsetTop = $(".loadnav").offset().top;
+        var scrollTop = $(window).scrollTop() + 150;
+
+        if(scrollTop > offsetTop){
+            $("#csfloater").fadeIn(200);
+        }else if(scrollTop < offsetTop){
+            $("#csfloater").fadeOut(200);
+        }
+    }
+
+    $(document).ready(function() {
+        if(!smallScreen()){
+            initSidebarHide();
+        }
+    });
+
+    $(window).scroll(function(){
+        if(!smallScreen()){
+            initSidebarHide();
+        }
+    });
+
+
+</script>
+</body>
+</html>

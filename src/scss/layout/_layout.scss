@@ -45,6 +45,22 @@ body {
   }
 }
 
+.vh-height {
+  @include media-breakpoint-up(lg) {
+    min-height: 100vh;
+  }
+  @include media-breakpoint-down(md) {
+    min-height: 100vh;
+
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: auto;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: auto;
+  }
+}
+
 #cover {
   position:fixed;
   top:0;

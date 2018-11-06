@@ -147,7 +147,7 @@ h6, .h6 {
   text-shadow: 0 0 20px rgba(0, 0, 0, 1);
   color: $white;
   font-weight: 300;
-  @include fluid-type(30px, 70px);
+  margin-bottom: 20px;
 }
 
 .meta-text {

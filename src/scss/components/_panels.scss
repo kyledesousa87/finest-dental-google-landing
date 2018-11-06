@@ -7,13 +7,31 @@
     color: $white;
     text-align: center;
     border-radius: 5px 5px 0 0 ;
+    &.narrow {
+      text-align: left;
+      padding: 5px 20px;
+      @include fluid-type(18px, 20px);
+    }
     &.blue {
       background-color: $acc1 !important;
     }
 
   }
   .panel-body {
-    padding: 40px;
+
+    @include media-breakpoint-up(xs) {
+      padding: 15px;
+    }
+    @include media-breakpoint-up(sm) {
+      padding: 15px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 25px;
+    }
   }
 }
 
@@ -30,6 +48,7 @@
 
   &.light {
     background-color: lighten($acc1, 45%);
+    border: 0;
   }
 
   &.dark-blue {
@@ -298,13 +317,26 @@
 
 }
 .full-implants {
+
+
+  margin-top: 20px;
+
   .dental-cards-holder{
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
-    margin-top: 20px !important;
+
+    .dental-cards-col {
+      &.left {
+        padding:0 10px 0 0;
+      }
+      &.right {
+        padding:0 0 0 10px;
+      }
+    }
+
     .dental-cards-col .dental-card {
-      box-shadow: 0 0 20px $gray-600 !important;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
   }
 }
@@ -325,7 +357,7 @@
     padding-top: 0 !important;
     margin-bottom: 20px;
     .dental-cards-col .dental-card {
-      box-shadow: 0 0 20px $gray-300;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
   }
 
@@ -398,7 +430,7 @@
         font-weight:600;
         color: $gray-600;
         text-align:center;
-        @include fluid-type(18px, 20px);
+        @include fluid-type(15px, 17px);
       }
 
       .detntal-details {
@@ -638,6 +670,7 @@
   @include media-breakpoint-up(lg) {
     flex-flow: row nowrap;
     justify-content:flex-end;
+    width: 100%;
   }
 
   .col-cs {
@@ -701,4 +734,64 @@
     @include fluid-type(22px, 42px);
     font-weight: normal;
   }
+}
+
+
+.cs-row-henry {
+  display: flex;
+
+  @include media-breakpoint-up(xs) {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    margin-top: 0px;
+  }
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+
+  .cs-col-1 {
+    @include media-breakpoint-up(xs) {
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    @include media-breakpoint-up(md) {
+     width: 50%;
+      padding: 20px;
+      margin-right: 5px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+      padding: 40px;
+      margin-right: 10px;
+    }
+  }
+
+  .cs-col-2 {
+    @include media-breakpoint-up(xs) {
+      width: 100%;
+      padding: 20px;
+
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 50%;
+      padding: 20px;
+      margin-left: 5px;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+      padding: 40px;
+      margin-left: 10px;
+    }
+  }
+
 }

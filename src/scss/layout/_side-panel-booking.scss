@@ -28,11 +28,35 @@
   }
 }
 
+#csfloater {
+  position: fixed;
+  width: 100%;
+  top: 49px;
+  bottom: 0;
+  z-index: 100;
+  right: -80px;
+  @include media-breakpoint-up(xl) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}
+
 #floaterCol {
   height: 100%;
   position: relative;
   background-color: #4d9652;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.33);
 
   h3 {
     text-align: center;
@@ -55,8 +79,6 @@
   #quote {
     position: absolute;
     bottom: 0;
-
-    top: 670px;
     /* background-color: rgba(0, 0, 0, 0.25); */
     left: 0;
     right: 0;

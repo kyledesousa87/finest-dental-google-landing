@@ -3692,11 +3692,39 @@ function anim(p) {
     },500);
 }
 
+
+
+function hideEleOnPage (e){
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+    $(e).each(function() {
+        if ($(this).isInViewport()) {
+            $('.special-btn').hide();
+
+        } else {
+            $('.special-btn').show();
+        }
+    });
+}
+
+$(window).on('resize scroll', function() {
+    hideEleOnPage('.hideBtnInit');
+
+});
+
+
+
 $(document).ready(function() {
 
     //call back to add active class
-
-
+    hideEleOnPage('.hideBtnInit');
 
     $('.clients-reviews').owlCarousel({
         autoplay: true,
@@ -3968,7 +3996,6 @@ $(document).ready(function() {
     // reOpen();
 
 });
-
 
 
 

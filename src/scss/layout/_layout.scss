@@ -1,5 +1,10 @@
 $navBarH: 54px;
 
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -50,7 +55,23 @@ body {
     min-height: 100vh;
   }
   @include media-breakpoint-down(md) {
-    min-height: 100vh;
+    min-height: auto;
+
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: auto;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: auto;
+  }
+}
+
+.vh-height-minus-subheader {
+  @include media-breakpoint-up(lg) {
+    min-height: calc(100vh - 177px)
+  }
+  @include media-breakpoint-down(md) {
+    min-height: auto;
 
   }
   @include media-breakpoint-down(sm) {

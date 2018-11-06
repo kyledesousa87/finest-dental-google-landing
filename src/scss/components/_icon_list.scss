@@ -35,51 +35,74 @@
       @include media-breakpoint-down(xs) {
         flex-basis: 50%;
       }
-
-
       display: block;
+      .icon-dis {
+        @include media-breakpoint-up(lg) {
+          padding: 0px 5px;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 10px 10px;
+          border-bottom: 1px solid $acc1;
+          min-height: 90px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 10px 10px;
+          border-bottom: 1px solid $acc1;
+          min-height: 90px;
+        }
 
-    }
-    .icon-dis {
-      @include media-breakpoint-up(lg) {
-        padding: 0px 5px;
-      }
-      @include media-breakpoint-down(md) {
-        padding: 10px 10px;
-        border-bottom: 1px solid $acc1;
-        min-height: 90px;
-      }
-      @include media-breakpoint-down(sm) {
-        padding: 10px 10px;
-        border-bottom: 1px solid $acc1;
-        min-height: 90px;
-      }
-      @include media-breakpoint-down(xs) {
-        padding: 10px 10px;
-        border-bottom: 1px solid $acc1;
-        min-height: 90px;
+
+        position: relative;
+        &-ico {
+          position: absolute;
+
+          color: $acc1;
+
+          @include media-breakpoint-up(lg) {
+            font-size: 50px;
+            height: 50px;
+          }
+          @include media-breakpoint-down(md) {
+            font-size: 50px;
+            height: 50px;
+          }
+          @include media-breakpoint-down(sm) {
+            font-size: 30px;
+            height: 30px;
+          }
+          @include media-breakpoint-down(xs) {
+            font-size: 30px;
+            height: 30px;
+          }
+        }
+        &-h1, &-h2 {
+
+          @include media-breakpoint-up(lg) {
+            margin-left: 55px;
+          }
+          @include media-breakpoint-down(md) {
+            margin-left: 55px;
+          }
+          @include media-breakpoint-down(sm) {
+            margin-left: 35px;
+          }
+          @include media-breakpoint-down(xs) {
+            margin-left: 35px;
+          }
+
+        }
+        &-h1 {
+          font-size: 22px;
+          color: $acc1;
+        }
+        &-h2 {
+          font-size: 16px;
+          line-height: 18px;
+          font-weight: 400;
+          color: $acc3;
+        }
       }
 
-      position: relative;
-      &-ico {
-        position: absolute;
-        font-size: 50px;
-        color: $acc1;
-        height: 50px;
-      }
-      &-h1, &-h2 {
-        margin-left: 55px;
-      }
-      &-h1 {
-        font-size: 22px;
-        color: $acc1;
-      }
-      &-h2 {
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: 400;
-        color: $acc3;
-      }
     }
 
   }

@@ -7,6 +7,7 @@
       "deposit": "£170",
       "months": "60",
       "interest": "9.9%",
+      "interestPayed": "£395.66",
       "pmPrice": "£32.00pm",
       "repay": "£2,090.66",
       "termsNum": "1"
@@ -19,6 +20,7 @@
       "deposit": "£339",
       "months": "60",
       "interest": "9.9%",
+      "interestPayed": "£791.57",
       "pmPrice": "£64.01pm",
       "repay": "£4,181.57",
       "termsNum": "2"
@@ -31,6 +33,7 @@
       "deposit": "£449",
       "months": "60",
       "intrest": "9.9%",
+      "interestPayed": "£1,047.12",
       "pmPrice": "£84.72pm",
       "repay": "£5,532.12",
       "termsNum": "3"
@@ -43,6 +46,7 @@
       "deposit": "£598",
       "months": "60",
       "interest": "9.9%",
+      "interestPayed": "£1,396.97",
       "pmPrice": "£112.97pm",
       "repay": "£7,376.34",
       "termsNum": "4"
@@ -55,6 +59,7 @@
       "deposit": "£675.00",
       "months": "60",
       "interest": "9.9%",
+      "interestPayed": "£1,576.13",
       "pmPrice": "£127.52pm",
       "repay": "£8,326.13",
       "termsNum": "5"
@@ -67,6 +72,7 @@
       "deposit": "£600.00",
       "months": "60",
       "interest": "9.9%",
+      "interestPayed": "£2331.13",
       "pmPrice": "£113.24pm",
       "repay": "£8,326.13",
       "termsNum": "6"
@@ -79,6 +85,7 @@
       "deposit": "£1000.00",
       "months": "60",
       "interest": "9.9%",
+      "interestPayed": "£2,333.72.00",
       "pmPrice": "£188.81pm",
       "repay": "£12,328.72",
       "termsNum": "7"

@@ -14,23 +14,23 @@
                             <div class="col-sm-12 col-lg-4">
 
                                 <div class="strip mb-4">
-
                                     <div class="strip-col">
                                         <div class="strip-item p-0">
                                             <div class="strip-item-img">
                                                 <img src="/images/nobel_all_on_4.png" alt="implant image">
                                             </div>
                                             <div class="strip-item-number">
-                                                1<span>arch</span>
+                                                {{pricing.singleArch.qty}}<span>{{pricing.singleArch.name}}</span>
+                                            </div>
+                                            <div class="strip-item-price big ">
+                                                {{pricing.singleArch.total}}  <span>or</span>
                                             </div>
 
-                                            <div class="strip-item-price big">
-                                                £5,995 <span>or</span>
-                                            </div>
                                             <div class="strip-item-or">or</div>
-                                            <div class="strip-item-monthly small">
-                                                £64.95<span>/month<sup>6</sup></span>
+                                            <div class="strip-item-monthly  small">
+                                               {{pricing.singleArch.pmPrice}}<span>/month<sup> {{pricing.singleArch.termsNum}}</sup></span>
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="strip-col">
@@ -38,20 +38,26 @@
                                             <div class="strip-item-img">
                                                 <img src="/images/implants7/both_arches.png" alt="implant image">
                                             </div>
-                                            <div class="strip-item-number ">
-                                                2<span>arches</span>
+                                            <div class="strip-item-number">
+                                                {{pricing.bothArch.qty}}<span>{{pricing.bothArch.name}}</span>
                                             </div>
-                                            <div class="strip-item-price big">
-                                                £9,995 <span>or</span>
+                                            <div class="strip-item-price  big">
+                                                {{pricing.bothArch.total}} <span>or</span>
                                             </div>
+
                                             <div class="strip-item-or">or</div>
-                                            <div class="strip-item-monthly small">
-                                                £108.28<span>/month<sup>7</sup></span>
+
+
+                                            <div class="strip-item-monthly  small">
+                                                 {{pricing.bothArch.pmPrice}}<span>/month<sup> {{pricing.bothArch.termsNum}}</sup></span>
                                             </div>
+
 
                                         </div>
                                     </div>
                                 </div>
+
+
 
                             </div>
                             <div class="col-sm-12 col-lg-8">
@@ -61,7 +67,15 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="divider "></div>
-                                {{>dental-implants-clean-form-terms}}
+
+                                <p class=" meta-text">
+                                    &nbsp;<sup>{{pricing.singleArch.termsNum}}</sup>. 10% deposit of {{pricing.singleArch.deposit}}, plus 60 payments of {{pricing.singleArch.pmPrice}} at {{pricing.singleArch.interest}} APR. Total paid {{pricing.singleArch.total}}, total interest paid {{pricing.singleArch.interestPayed}}. Subject to availability, terms and conditions apply.
+                                    &nbsp;<sup>{{pricing.bothArch.termsNum}}</sup>. 10% deposit of {{pricing.bothArch.deposit}}, plus 60 payments of {{pricing.bothArch.pmPrice}} at {{pricing.bothArch.interest}} APR. Total paid {{pricing.bothArch.total}}, total interest paid {{pricing.bothArch.interestPayed}}. Subject to availability, terms and conditions apply.
+                                </p>
+
+                                <p class="nb-text mb-0 meta-text">
+                                    <sup>8</sup>{{content.termsRefund}} {{content.termsCredit}}
+                                </p>
                             </div>
                         </div>
                     </div>

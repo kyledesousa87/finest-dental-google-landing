@@ -20,20 +20,30 @@
         <div class="col-sm-12 col-md-7 col-lg-6">
             {{>singleimplants-two-impants}}
             <div class="mt-2"> &nbsp;</div>
-            {{>clean-form}}
+            <div class="panel-h shadow">
+                <div class="panel-hed narrow">
+                    Book your <strong class=" d-none d-md-inline d">free</strong> consultation now.<sup>8</sup>
+                </div>
+                <div class="panel-body">
+                    {{>dental-implants-clean-form-no-hed}}
+
+                </div>
+
+            </div>
 
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <div class="meta-text mt-3">
-                <p>
-                    <sup>1</sup>Deposit of £170, plus 60 payments of £32.01pm at 9.9% APR. Subject to
-                    availability, terms and conditions apply. One-off payment cost: £1,695.00
-                    <sup>2</sup>Deposit of £600.00, plus 60 payments of £113.24pm at 9.9% APR. Subject to availability, terms and
-                    conditions apply. One-off payment cost: £5,995.00.
+            <div class="price-box">
+                <p class="meta-text">
+                    &nbsp;<sup>{{pricing.imp1.termsNum}}</sup>. 10% deposit of {{pricing.imp1.deposit}}, plus 60 payments of {{pricing.imp1.pmPrice}} at {{pricing.imp1.interest}} APR. Total paid {{pricing.imp1.total}}, total interest paid {{pricing.imp1.interestPayed}}. Subject to availability, terms and conditions apply.
+                    &nbsp;<sup>{{pricing.singleArch.termsNum}}</sup>. 10% deposit of {{pricing.singleArch.deposit}}, plus 60 payments of {{pricing.singleArch.pmPrice}} at {{pricing.singleArch.interest}} APR. Total paid {{pricing.singleArch.total}}, total interest paid {{pricing.singleArch.interestPayed}}. Subject to availability, terms and conditions apply.
+
                 </p>
-                <p class="nb-text mb-0"><strong>Finance subject to a minimum of 16 working hours per week and a suitable credit history.</strong> <strong><sup>8</sup>A £50 refundable deposit will be required at the point of booking. This will be returned to you on the day of your consultation. Finest Dental is regulated by the FCA as a credit broker.</strong></p>
+                <p class="nb-text mt-2 meta-text">
+                    <sup>8</sup>{{content.termsRefund}} {{content.termsCredit}}
+                </p>
             </div>
         </div>
     </div>

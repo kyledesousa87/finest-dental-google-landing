@@ -154,6 +154,23 @@ h6, .h6 {
   @include fluid-type(10px, 12px);
 }
 
+.price-box {
+  border-radius: 20px;
+  background-color: white;
+  margin-top: 15px;
+  padding: 20px;
+  p {
+    font-size: 11px;
+    color: $gray-500;
+    line-height: 120%;
+    margin: 0;
+    &.nb-text {
+      color: darkred;
+    }
+  }
+}
+
+
 .nb-text {
   color: #aa3333;
 }

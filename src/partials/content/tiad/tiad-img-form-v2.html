@@ -19,13 +19,28 @@
         </div>
         <div class="col-sm-12 col-md-7 col-lg-6 ">
             {{>tiad-two-swop}}
-            {{>clean-form}}
+            <div class="panel-h shadow mt-4">
+                <div class="panel-hed narrow">
+                    Book your <strong class=" d-none d-md-inline d">free</strong> consultation now.<sup>8</sup>
+                </div>
+                <div class="panel-body">
+                    {{>dental-implants-clean-form-no-hed}}
+                </div>
+
+            </div>
 
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            {{>form-tc-meta}}
+            <p class=" meta-text">
+                &nbsp;<sup>{{pricing.singleArch.termsNum}}</sup>. 10% deposit of {{pricing.singleArch.deposit}}, plus 60 payments of {{pricing.singleArch.pmPrice}} at {{pricing.singleArch.interest}} APR. Total paid {{pricing.singleArch.total}}, total interest paid {{pricing.singleArch.interestPayed}}. Subject to availability, terms and conditions apply.
+                &nbsp;<sup>{{pricing.bothArch.termsNum}}</sup>. 10% deposit of {{pricing.bothArch.deposit}}, plus 60 payments of {{pricing.bothArch.pmPrice}} at {{pricing.bothArch.interest}} APR. Total paid {{pricing.bothArch.total}}, total interest paid {{pricing.bothArch.interestPayed}}. Subject to availability, terms and conditions apply.
+            </p>
+
+            <p class="nb-text mb-0 meta-text">
+                <sup>8</sup>{{content.termsRefund}} {{content.termsCredit}}
+            </p>
         </div>
     </div>
 </div>

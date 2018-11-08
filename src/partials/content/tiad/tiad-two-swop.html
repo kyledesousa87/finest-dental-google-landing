@@ -1,39 +1,36 @@
-<div class="dental-cards-holder single">
-    <div class="dental-cards-col">
-        <div class="dental-card openForm">
-            <div class="dental-card-img">
-                <img src="/images/nobel_all_on_4.png" alt="implant image">
-                <div class="tri"></div>
+<div class="cs-4 d-flex">
+    <div class="dental-card shadow openForm d-flex flex-column justify-content-between h-100 first ">
+        <div class="dental-card-img h-50">
+            <img src="/images/nobel_all_on_4.png" alt="implant image">
+            <div class="tri"></div>
+        </div>
+        <div class="detntal-details h-50">
+            <div class="dental-card-hed">
+                {{pricing.singleArch.name}}
             </div>
-
-            <div class="detntal-details">
-                <div class="dental-card-hed">WHOLE ARCH</div>
-                <div class="detntal-details_monthly big">
-                    £64.95 <span>/month<sup>1</sup></span>
-                </div>
-
-                <div class=" detntal-details_price small">
-                    <span>or £5,995 </span>
-                </div>
+            <div class="detntal-details_price big">
+                {{pricing.singleArch.total}} <span>or</span>
+            </div>
+            <div class="detntal-details_monthly small">
+                {{pricing.singleArch.pmPrice}}<span>/month<sup>{{pricing.singleArch.termsNum}}</sup></span>
             </div>
         </div>
     </div>
-    <div class="dental-cards-col">
-        <div class="dental-card openForm">
-            <div class="dental-card-img">
-                <img src="/images/implants7/both_arches.png
-" alt="implant image">
-                <div class="tri"></div>
-            </div>
+    <div class="dental-card shadow openForm d-flex flex-column justify-content-between h-100 last">
+        <div class="dental-card-img h-50">
+            <img src="/images/implants7/both_arches.png" alt="implant image">
+            <div class="tri"></div>
+        </div>
 
-            <div class="detntal-details">
-                <div class="dental-card-hed">BOTH ARCHES </div>
-                <div class=" detntal-details_monthly big">
-                    £108.28 <span>/month<sup>2</sup></span>
-                </div>
-                <div class="detntal-details_price small">
-                    <span>or £9,995 </span>
-                </div>
+        <div class="detntal-details h-50">
+            <div class="dental-card-hed">
+                {{pricing.bothArch.name}}
+            </div>
+            <div class="detntal-details_price big">
+                {{pricing.bothArch.total}} <span>or</span>
+            </div>
+            <div class="detntal-details_monthly small">
+                {{pricing.bothArch.pmPrice}}<span>/month<sup>{{pricing.bothArch.termsNum}}</sup></span>
             </div>
         </div>
     </div>

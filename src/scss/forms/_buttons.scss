@@ -237,8 +237,20 @@ a.btn-facebook {
 }
 
 
-a.contact-btn {
+a.contact-btn-inline {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  color: $acc4;
+  font-size: inherit;
+  text-align: right;
+  .number {
+    display: block;
+    font-size: inherit;
+  }
+}
 
+a.contact-btn {
     position: relative;
     text-decoration: none;
     display: inline-block;
@@ -277,3 +289,4 @@ a.contact-btn {
       font-weight: 700;
     }
 }
+

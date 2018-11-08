@@ -192,9 +192,27 @@ body {
 }
 
 .panel-img-nobel {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 140px;
+  }
+  @include media-breakpoint-down(md) {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 140px;
+
+  }
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+  }
+
 }
 
 .panel-img-tick {

@@ -6,18 +6,18 @@
             </button>
             <div class="modal-body">
                 <h3>BOOK YOUR <span>FREE</span> CONSULTATION</h3>
+                <h4>For a free consultaion <a class="contact-btn-inline" href="tel:{{content.tellnumber}}">
+                    <div class="number">
+                        <strong>Call: {{content.tellnumber}}</strong>
+                    </div>
+                </a></h4>
                 <div class="formContainer portait">
                     <form action="/consultation.php" method="POST">
                     <input type=hidden name="company" value="1">
-
                     <input type=hidden name="sourceForm" value="Implants Sections Google Popup Form">
-
                     [!trackingFields!]
-
                     <input type=hidden name="product" value="Implants">
-
                     <input type="hidden" name="treatment" value="4" />
-
                     <div class="formRow">
                         <input type="text" name="first_name" id="first_nameB" placeholder="FIRST NAME" required />
                     </div>
@@ -34,11 +34,8 @@
                         <input type="text" name="address" placeholder="REQUIRED ADDRESS" />
                     </div>
                     <div class="formRow">
-
                         <input type="text" name="postcode" placeholder="POSTCODE" required />
-
                     </div>
-
                     <div class="formRow"><em class="small">A £50 refundable deposit will be required at the point of booking. This will be returned to you on the day of your consultation. Finance subject to a minimum of 16 working hours per week and a suitable credit history.</em></div>
                     <div class="formRow">
                         <input type="submit" class="submit" name="submitF" value="BOOK NOW" />

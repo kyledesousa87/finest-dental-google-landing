@@ -468,9 +468,6 @@ a.img-free-consult {
 
 .hed-price-dental-imp {
 
-
-
-
   img {
 
     height: 80px;
@@ -487,17 +484,18 @@ a.img-free-consult {
   margin-right: auto;
   left: 0;
   right: 0;
+  z-index: 5;
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (max-width: 480px) {
-    top: 40%;
+    top: 85%;
     width: 120px;
     height: 120px;
   }
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    top: 45%;
+    top: 85%;
     width: 100px;
     height: 100px;
   }
@@ -506,35 +504,35 @@ a.img-free-consult {
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 540px) {
-    top: 50%;
+    top: 85%;
     width: 120px;
     height: 120px;
   }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    top: 55%;
+    top: 85%;
     width: 100px;
     height: 100px;
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    top: 25%;
+    top: 85%;
     width: 100px;
     height: 100px;
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    top: 45%;
+    top: 85%;
     width: 140px;
     height: 140px;
   }
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    top: 40%;
+    top: 80%;
     width: 150px;
     height: 150px;
   }

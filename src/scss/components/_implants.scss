@@ -212,12 +212,10 @@
 
 
       &.big {
-
-          @include fluid-type(15px, 20px);
-
+        @include fluid-type(15px, 20px);
       }
       &.small{
-        @include fluid-type(15px, 20px);
+        @include fluid-type(14px, 15px);
       }
 
       @include media-breakpoint-up(lg) {
@@ -279,19 +277,13 @@
     .strip-item-price {
 
       &.big {
-
           @include fluid-type(15px, 20px);
-
       }
       &.small{
-        @include fluid-type(15px, 20px);
+        @include fluid-type(14px, 15px);
       }
 
-      @include media-breakpoint-up(lg) {
-      }
-      @include media-breakpoint-down(md) {
 
-      }
       @include media-breakpoint-down(sm) {
         flex-grow: 1;
       }

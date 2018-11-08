@@ -3692,8 +3692,6 @@ function anim(p) {
     },500);
 }
 
-
-
 function hideEleOnPage (e){
     $.fn.isInViewport = function() {
         var elementTop = $(this).offset().top;
@@ -3753,6 +3751,17 @@ $(document).ready(function() {
 
     $('.nav-anchor li a').click(function() {
         $('.navbar .nav-anchor ul li a').removeClass('active');
+        $(this).addClass('active');
+
+        var target = $(this.hash);
+        if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+        if (target.length == 0) target = $('html');
+        $('html, body').animate({ scrollTop: target.offset().top - 52}, 1000);
+        return false;
+    });
+
+    $('.main-nav_links li a').click(function() {
+        $('.main-nav_links ul li a').removeClass('active');
         $(this).addClass('active');
 
         var target = $(this.hash);
@@ -3879,22 +3888,6 @@ $(document).ready(function() {
         ga('send', 'pageview');
     },1200);
 
-    // defer ResponseTap loading
-    var dlrt = setTimeout(function(){
-        var headID = document.getElementsByTagName("head")[0];
-        adiInit = "35441";
-        adiRVO = true;
-        adiFunc = null;
-        // (function() {
-        adiSrc = document.createElement("script"); adiSrc.type = "text/javascript";
-        adiSrc.async = true;
-        adiSrc.src = ("https:" == document.location.protocol ? "https://static-ssl" : "http://static-cdn")+ ".responsetap.com/static/scripts/rTapTrack.min.js";
-
-        // var s = document.getElementsByTagName("script")[0];
-        // s.parentNode.insertBefore(adiSrc, s);
-        headID.appendChild(adiSrc);
-        // })();
-    },500);
 
     // delayed load of above-the-fold reviews widget
     var dr = setTimeout(function() {
@@ -3941,11 +3934,6 @@ $(document).ready(function() {
 
     // Add scrollspy to <body>
     $('body').scrollspy({offset: 50});
-
-    $('.navbar .nav-anchor ul li a').on('click', function() {
-
-
-    });
 
 
     $('.fpanel a').click(function(e){

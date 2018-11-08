@@ -19,14 +19,13 @@ html {
 
   background-color: $footerBG;
 
-
-
   .footer-row {
+    @extend .container;
+    @include make-row();
     margin: 0 auto !important;
 
     justify-content: center;
     padding: 20px ;
-    @extend .container;
 
     .col {
       @include make-col-ready();

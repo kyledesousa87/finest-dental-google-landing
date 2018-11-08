@@ -1,0 +1,120 @@
+$navBarH: 54px;
+.nav-wrapper{
+  width: 100%;
+  background-color: $acc1;
+  display: block;
+  height: $navBarH;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  @extend .container;
+  padding: 0 !important;
+
+  &_logo {
+
+    @include media-breakpoint-up(lg) {
+      width: 210px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 210px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 210px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 180px;
+    }
+    display: block;
+    height: $navBarH;
+    background: url($imgPathRoot + "logo_white.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    float: left;
+
+  }
+
+  &_links {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+
+        a {
+
+          text-decoration: none;
+          font-family: $fontName;
+          display: block;
+          @include fluid-type(13px, 15px);
+          color: white;
+          padding: 0px 10px;
+          height: $navBarH;
+          line-height: $navBarH;
+          &.active {
+            background-color: darken($acc1, 10%);
+          }
+        }
+      }
+    }
+  }
+  &_callbtn {
+    width: 190px;
+    a {
+      text-align: left;
+      position: relative;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      color: white;
+      .number {
+        display: block;
+        position: absolute;
+        margin-left: 35px;
+        padding-top: 3px;
+        strong {
+          font-size: 18px;
+          line-height: 18px;
+        }
+        span {
+          font-size: 21px;
+          line-height: 21px;
+        }
+      }
+
+      &:before {
+        @extend .lnr;
+        @extend .lnr-phone-handset;
+        font-size: 25px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+    }
+
+
+  }
+}
+

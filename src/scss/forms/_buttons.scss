@@ -235,3 +235,45 @@ a.btn-facebook {
     }
 
 }
+
+
+a.contact-btn {
+
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    color: $acc4;
+    width: 210px;
+    text-align: right;
+    .number {
+      display: block;
+      position: absolute;
+      margin-left: 35px;
+      padding-top: 3px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 25px;
+        line-height: 25px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+        line-height: 18px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+
+    }
+    &:before {
+      @extend .lnr;
+      @extend .lnr-phone-handset;
+      font-size: 25px;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      font-weight: 700;
+    }
+}

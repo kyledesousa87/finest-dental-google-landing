@@ -105,3 +105,100 @@ body {
   margin-top: 10px;
   padding-bottom: 20px;
 }
+
+.customStyle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin:0 0 0 -1rem;
+
+  .cs-1 {
+    @include media-breakpoint-up(lg) {
+      flex:1 0 25%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(md) {
+      flex:1 0 25%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex:1 0 90%;
+      margin:0 0 1rem 1rem;
+    }
+
+  }
+  .cs-2 {
+    @include media-breakpoint-up(lg) {
+      flex:1 0 25%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(md) {
+      flex:1 0 40%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex:1 0 90%;
+      margin:0 0 1rem 1rem;
+    }
+
+  }
+  .cs-3 {
+    @include media-breakpoint-up(lg) {
+      flex:1 0 25%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(md) {
+      flex:1 0 45%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex:1 0 90%;
+      margin:0 0 1rem 1rem;
+    }
+
+  }
+  .cs-4 {
+    @include media-breakpoint-up(lg) {
+      flex:1 0 30%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(md) {
+      flex:1 0 25%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex:1 0 25%;
+      margin:0 0 1rem 1rem;
+    }
+
+  }
+  .cs-5 {
+
+    @include media-breakpoint-up(lg) {
+      flex:1 0 63%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(md) {
+      flex:1 0 63%;
+      margin:0 0 1rem 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex:1 0 90%;
+      margin:0 0 1rem 1rem;
+    }
+
+
+  }
+}
+
+.panel-img-nobel {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.panel-img-tick {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}

@@ -67,7 +67,7 @@ gulp.task('watch', ['sass'], function () {
     browserSync.init({
         server: "./dist"
     });
-
+    gulp.watch(['./src/{data}/**/*'], [panini.refresh]);
     gulp.watch(['src/js/partials/*.js'], ['scripts', browserSync.reload]);
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/**/*'], ['sass', browserSync.reload]);
     gulp.watch(['src/images/**/*'], ['images']);

@@ -18,8 +18,16 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     runSequence = require('run-sequence'),
     cssnano = require('gulp-cssnano'),
+    clean = require('gulp-clean'),
     autoprefixer = require('gulp-autoprefixer');
 
+
+
+
+gulp.task('clean', function () {
+    return gulp.src('dist/', {read: false})
+        .pipe(clean());
+});
 
 // ------------ Development Tasks -------------
 // Compile Sass into CSS
